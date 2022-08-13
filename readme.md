@@ -1,4 +1,4 @@
 g1wang's Blog
 
-### [JAVA](./Blog/JAVA)
+### [JAVA](./Blog/JAVA/readme.md)
 
