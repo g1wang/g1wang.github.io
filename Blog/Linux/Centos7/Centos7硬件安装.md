@@ -55,6 +55,12 @@ mkfs.ext4  /dev/sdb1
 
 ```
 mkdir  /home/lee/dev
+
+#给分区指定文件系统：ext2和ext3
+#mke2fs /dev/sdb1   #默认是ext2，此命令是创建文件系统
+#mke2fs -j /dev/sdb1 #-j 是ext3
+#mke2fs  -t ext4 /dev/sdb1 #ext4创建文件系统
+#tune2fs -l /dev/sdb1  #查看文件系统的详细信息
 ```
 
 - b. 手动挂载

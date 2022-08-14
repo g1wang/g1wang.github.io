@@ -31,3 +31,5 @@
 
 #### [Centos7硬件安装](./Blog/Linux/Centos7/Centos7硬件安装.md)
 
+#### [Centos7_Tengine安装](./Blog/Linux/Centos7/Centos7_Tengine安装.md)
+
