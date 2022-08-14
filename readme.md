@@ -15,7 +15,7 @@
 
 #### [JVM_02_GC](./Blog/JAVA/JVM/JVM_02_GC.md)
 
-#### [JVM_03_类加载机制](./Blog/JAVA/JVM/JVM_03_类加载机制.md)
+#### [JVM_03_ClassLoader](./Blog/JAVA/JVM/JVM_03_ClassLoader.md)
 
 ## MySQL
 #### [MySQL安装](./Blog/MySQL/mysql安装.md)
