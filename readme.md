@@ -1,4 +1,4 @@
-#g1wang's Blog
+# g1wang's Blog
 
 ## JAVA
 
@@ -13,7 +13,10 @@
 
 ## Linux
 
-### centos7
+### Centos7
 
-- [Centos7正式环境安装](Blog\Centos7正式环境安装.md)
+- [Centos7用户管理](./Blog/Linux/Centos7/Centos7用户管理.md)
+
+- [Centos7正式环境安装](./Blog/Linux/Centos7/Centos7正式环境安装.md)
+- [Centos7硬件安装](./Blog/Linux/Centos7/Centos7硬件安装.md)
 
