@@ -1,6 +1,16 @@
 ## Centos7命令
 
+##### command not found...
+
+```
+echo 'export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin' >> /etc/profile
+source /etc/profile
+```
+
+
+
 ##### 查看端口占用
+
 `netstat -ano|grep 6379`
 
 #####  软链接
