@@ -4,13 +4,11 @@
 
 ```
 public enum TrivelStyle{
-
             easy(0),funny(1),hot(2);
             private final int num ;
             private TrivelStyle(int num) {
                   this.num = num;
             }
-
             public int styleNum(){
                   return num;
             }

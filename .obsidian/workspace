@@ -4,15 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "29c78573cf6356b3",
+        "id": "646b592ce3f1f9e5",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Blog/JAVA/JavaPrimer/Enum.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blog/JAVA/JavaPrimer/Enum.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blog/JAVA/JavaPrimer/Enum.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Blog/JAVA/JavaPrimer/Enum.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -136,9 +128,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "29c78573cf6356b3",
+  "active": "646b592ce3f1f9e5",
   "lastOpenFiles": [
+    "Blog/JAVA/JavaPrimer/Enum.md",
     "readme.md",
-    "Blog/JAVA/JavaPrimer/Enum.md"
+    "Blog/JAVA/SpringBoot/SpringBoot-RestfulAPI.md"
   ]
 }
