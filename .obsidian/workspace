@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "readme.md",
+            "file": "Blog/JAVA/JavaPrimer/Enum.md",
             "mode": "source",
             "source": false
           }
@@ -19,100 +19,126 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "0210a96c646d739f",
-    "type": "mobile-drawer",
+    "id": "7e80154674577a94",
+    "type": "split",
     "children": [
       {
-        "id": "c201b5effdca4c14",
-        "type": "leaf",
-        "state": {
-          "type": "file-explorer",
-          "state": {}
-        }
-      },
-      {
-        "id": "ab753bf1c8a2a94b",
-        "type": "leaf",
-        "state": {
-          "type": "search",
-          "state": {
-            "query": "",
-            "matchingCase": false,
-            "explainSearch": false,
-            "collapseAll": false,
-            "extraContext": false,
-            "sortOrder": "alphabetical"
+        "id": "bada6905f230d4ba",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cb4982a48523e779",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "43f614a882d6984a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "6c26af464443efb3",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
           }
-        }
-      },
-      {
-        "id": "eaa304bcc54345ce",
-        "type": "leaf",
-        "state": {
-          "type": "tag",
-          "state": {
-            "sortOrder": "frequency",
-            "useHierarchy": true
-          }
-        }
-      },
-      {
-        "id": "ce4f2c45ced3178a",
-        "type": "leaf",
-        "state": {
-          "type": "starred",
-          "state": {}
-        }
+        ]
       }
     ],
-    "currentTab": 0
+    "direction": "horizontal",
+    "width": 300
   },
   "right": {
-    "id": "2d4aafccb91ae44c",
-    "type": "mobile-drawer",
+    "id": "34d2fd7b7cd267b7",
+    "type": "split",
     "children": [
       {
-        "id": "b1a035614d9a1fc1",
-        "type": "leaf",
-        "state": {
-          "type": "backlink",
-          "state": {
-            "file": "readme.md",
-            "collapseAll": false,
-            "extraContext": false,
-            "sortOrder": "alphabetical",
-            "showSearch": false,
-            "searchQuery": "",
-            "backlinkCollapsed": false,
-            "unlinkedCollapsed": true
+        "id": "5074dcb66395169f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2f7e488408f90395",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "f9dce7f89418da9e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Blog/JAVA/JavaPrimer/Enum.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "64e1a59e15184e22",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Blog/JAVA/JavaPrimer/Enum.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7c87dbdb4701080b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "99ae6cf38b79bac8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Blog/JAVA/JavaPrimer/Enum.md"
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "80bed581ce100262",
-        "type": "leaf",
-        "state": {
-          "type": "outgoing-link",
-          "state": {
-            "file": "readme.md",
-            "linksCollapsed": false,
-            "unlinkedCollapsed": true
-          }
-        }
-      },
-      {
-        "id": "be57a465dece8288",
-        "type": "leaf",
-        "state": {
-          "type": "outline",
-          "state": {
-            "file": "readme.md"
-          }
-        }
+        ]
       }
     ],
-    "currentTab": 0
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
   },
   "active": "29c78573cf6356b3",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "readme.md",
+    "Blog/JAVA/JavaPrimer/Enum.md"
+  ]
 }

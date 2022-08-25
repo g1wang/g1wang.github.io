@@ -2,7 +2,7 @@
 
 ## JAVA
 ### JAVA Primer
-#### []
+#### [[Enum]]
 ###  SpringBoot
 #### [SpringBoot-RestfulAPI](./Blog/JAVA/SpringBoot/SpringBoot-RestfulAPI.md)
 #### [SpringBoot参数校验](./Blog/JAVA/SpringBoot/SpringBoot参数校验.md)
