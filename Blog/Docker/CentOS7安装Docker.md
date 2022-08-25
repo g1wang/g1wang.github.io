@@ -62,3 +62,32 @@ $ sudo sh get-docker.sh --mirror Aliyun
 
 ### 镜像加速器
 
+1.查看是否在 `docker.service` 文件中配置过镜像地址
+
+```
+systemctl cat docker | grep '\-\-registry\-mirror'
+```
+
+如果该命令有输出，那么请执行 `$ systemctl cat docker` 查看 `ExecStart=` 出现的位置，修改对应的文件内容去掉 `--registry-mirror` 参数及其值
+
+2.修改 /etc/docker/daemon.json
+
+```
+sudo vim /etc/docker/daemon.json
+
+#添加
+{
+  "registry-mirrors": [
+    "https://hub-mirror.c.163.com",
+    "https://mirror.baidubce.com"
+  ]
+}
+```
+
+3.重启服务
+
+```
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
