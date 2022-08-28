@@ -2,7 +2,11 @@
 
 #### 添加用户
 
-`useradd devops`
+```
+useradd devops
+#设置密码
+passwd devops
+```
 
 #### 授权
 

@@ -60,6 +60,25 @@ $ curl -fsSL get.docker.com -o get-docker.sh
 $ sudo sh get-docker.sh --mirror Aliyun
 ```
 
+
+### 启动docker
+```
+sudo systemctl enable docker
+sudo systemctl start docker
+```
+
+### 建立 `docker` 组
+默认情况下，`docker` 命令会使用 [Unix socket](https://en.wikipedia.org/wiki/Unix_domain_socket) 与 Docker 引擎通讯。而只有 `root` 用户和 `docker` 组的用户才可以访问 Docker 引擎的 Unix socket。出于安全考虑，一般 Linux 系统上不会直接使用 `root` 用户。因此，更好地做法是将需要使用 `docker` 的用户加入 `docker` 用户组
+```
+sudo groupadd docker
+sudo usermod -aG docker $USER
+```
+
+### 检测是否安装成功
+```
+docker run --rm hello-world
+```
+
 ### 镜像加速器
 
 1.查看是否在 `docker.service` 文件中配置过镜像地址
@@ -91,3 +110,13 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
+4.其他镜像服务
+
+```
+腾讯云：
+{
+  "registry-mirrors": [
+    "https://mirror.ccs.tencentyun.com“
+  ]
+}
+```

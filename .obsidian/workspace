@@ -7,23 +7,27 @@
         "id": "646b592ce3f1f9e5",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Blog/Docker/CentOS7安装Docker.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "7e80154674577a94",
+    "id": "f1602358e6202097",
     "type": "split",
     "children": [
       {
-        "id": "bada6905f230d4ba",
+        "id": "8e6b80ca1e784a53",
         "type": "tabs",
         "children": [
           {
-            "id": "cb4982a48523e779",
+            "id": "57e46047b5522a3b",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -31,7 +35,7 @@
             }
           },
           {
-            "id": "43f614a882d6984a",
+            "id": "10c3f26abee1326a",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -46,7 +50,7 @@
             }
           },
           {
-            "id": "6c26af464443efb3",
+            "id": "06a70f26b008fa67",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -60,15 +64,15 @@
     "width": 300
   },
   "right": {
-    "id": "34d2fd7b7cd267b7",
+    "id": "b5fba041bbeda1b8",
     "type": "split",
     "children": [
       {
-        "id": "5074dcb66395169f",
+        "id": "fbc7a22ab8d29960",
         "type": "tabs",
         "children": [
           {
-            "id": "2f7e488408f90395",
+            "id": "a3db37a8b977406b",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -76,11 +80,12 @@
             }
           },
           {
-            "id": "f9dce7f89418da9e",
+            "id": "aa7d78705337c90c",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Blog/Docker/CentOS7安装Docker.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -92,18 +97,19 @@
             }
           },
           {
-            "id": "64e1a59e15184e22",
+            "id": "318bbc99af8fedc5",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Blog/Docker/CentOS7安装Docker.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "7c87dbdb4701080b",
+            "id": "aad783596d1b8fb0",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -114,11 +120,13 @@
             }
           },
           {
-            "id": "99ae6cf38b79bac8",
+            "id": "c08c230f4c0dbcbb",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Blog/Docker/CentOS7安装Docker.md"
+              }
             }
           }
         ]
@@ -130,6 +138,10 @@
   },
   "active": "646b592ce3f1f9e5",
   "lastOpenFiles": [
+    "Blog/Linux/Centos7/Centos7用户管理.md",
+    "Blog/Linux/Centos7/Centos7正式环境安装.md",
+    "Blog/Docker/CentOS7安装Docker.md",
+    "Blog/MQ/emqx安装.md",
     "Blog/JAVA/JavaPrimer/Enum.md",
     "readme.md",
     "Blog/JAVA/SpringBoot/SpringBoot-RestfulAPI.md"
