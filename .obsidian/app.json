@@ -1,4 +1,5 @@
 {
   "defaultViewMode": "source",
-  "strictLineBreaks": true
+  "strictLineBreaks": true,
+  "alwaysUpdateLinks": true
 }

@@ -27,6 +27,8 @@
 #### [Centos7正式环境安装](./Blog/Linux/Centos7/Centos7正式环境安装.md)
 #### [Centos7硬件安装](./Blog/Linux/Centos7/Centos7硬件安装.md)
 #### [Centos7_Tengine安装](./Blog/Linux/Centos7/Centos7_Tengine安装.md)
+#### [Linux查看日志](./Blog/Linux/Centos7/Linux查看日志.md)
+#### [Linux_SSH限制IP登录](./Blog/Linux/Centos7/Linux_SSH限制IP登录.md)
 
 ## Docker
 #### [Docker-Primer](./Blog/Docker/Docker-Primer.md)
