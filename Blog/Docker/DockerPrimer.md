@@ -1,3 +1,5 @@
+## DockerPrimer
+
 ### CentOS 安装 Docker
 
 #### 系统要求
@@ -120,3 +122,94 @@ sudo systemctl restart docker
   ]
 }
 ```
+
+### 镜像
+#### 获取镜像
+##### 拉去镜像
+```
+# docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]
+docker pull ubuntu:18.04
+
+```
+##### 运行镜像
+```
+docker run ubuntu:18.04
+```
+
+#### 使用 Dockerfile 定制镜像
+
+
+### 操作容器
+#### 启动 
+```
+# docker run
+docker run ubuntu:18.04
+
+# -d 后台运行
+docker run -d ubuntu:18.04
+```
+当利用 `docker run` 来创建容器时，Docker 在后台运行的标准操作包括：
+
+-   检查本地是否存在指定的镜像，不存在就从 [registry](/docker_practice/repository) 下载
+-   利用镜像创建并启动一个容器
+-   分配一个文件系统，并在只读的镜像层外面挂载一层可读写层
+-   从宿主主机配置的网桥接口中桥接一个虚拟接口到容器中去
+-   从地址池配置一个 ip 地址给容器
+-   执行用户指定的应用程序
+-   执行完毕后容器被终止
+
+#### 终止
+```
+# docker container stop
+# docker container start
+# docker container restart
+
+```
+
+### 数据管理
+#### 数据卷
+`数据卷` 是一个可供一个或多个容器使用的特殊目录，它绕过 UFS，可以提供很多有用的特性：
+-   `数据卷` 可以在容器之间共享和重用
+-   对 `数据卷` 的修改会立马生效
+-   对 `数据卷` 的更新，不会影响镜像
+-   `数据卷` 默认会一直存在，即使容器被删除
+
+> 注意：`数据卷` 的使用，类似于 Linux 下对目录或文件进行 mount，镜像中的被指定为挂载点的目录中的文件会复制到数据卷中（仅数据卷为空时会复制）。
+
+##### 创建一个数据卷
+```
+#创建
+sudo docker volume create my-vol
+
+#查看所有的数据卷
+sudo docker volume ls
+
+#查看指定 `数据卷` 的信息
+sudo docker volume inspect my-vol
+```
+
+##### 启动一个挂载数据卷的容器
+在用 `docker run` 命令的时候，使用 `--mount` 标记来将 `数据卷` 挂载到容器里。在一次 `docker run` 中可以挂载多个 `数据卷`。
+下面创建一个名为 `web` 的容器，并加载一个 `数据卷` 到容器的 `/usr/share/nginx/html` 目录
+```
+sudo docker run -d -P \
+    --name web \
+    --mount source=my-vol,target=/usr/share/nginx/html \
+    nginx:alpine
+```
+
+##### 查看数据卷的具体信息
+```
+docker inspect web
+```
+
+##### 删除数据卷
+```
+# 删除指定的数据卷
+docker volume rm my-vol
+
+# 清理无主的数据卷
+sudo docker volume prune
+```
+
+#### 挂载主机目录
