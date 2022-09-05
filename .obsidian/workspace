@@ -129,14 +129,14 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "a9e0fd7616450e48",
+  "active": "6215f6c514a2ae36",
   "lastOpenFiles": [
     "Blog/JAVA/Web/nginx跨域处理.md",
     "Readme.md",

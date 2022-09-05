@@ -212,4 +212,84 @@ docker volume rm my-vol
 sudo docker volume prune
 ```
 
-#### 挂载主机目录
+##### 挂载主机目录
+使用 `--mount` 标记可以指定挂载一个本地主机的目录到容器中去
+```
+#加载主机的 `/src/webapp` 目录到容器的 `/usr/share/nginx/html`目录
+
+docker run -d -P \
+--name web \
+--mount type=bind,source=/src/webapp,target=/usr/share/nginx/html \
+nginx:alpine
+```
+
+Docker 挂载主机目录的默认权限是 `读写`，用户也可以通过增加 `readonly` 指定为 `只读`
+```
+docker run -d -P \
+--name web \
+--mount type=bind,source=/src/webapp,target=/usr/share/nginx/html,readonly \
+nginx:alpine
+```
+
+##### 查看数据卷的具体信息
+```
+docker inspect web
+```
+
+##### 挂载一个本地主机文件作为数据卷
+`--mount` 标记也可以从主机挂载单个文件到容器中
+```
+docker run --rm -it \
+--mount type=bind,source=$HOME/.bash_history,target=/root/.bash_history \
+ubuntu:18.04 \
+bash
+```
+
+### 网络
+
+##### 映射到指定地址的指定端口
+可以使用 `ip:hostPort:containerPort` 格式指定映射使用一个特定地址，比如 localhost 地址 127.0.0.1
+```
+docker run -d -p 127.0.0.1:80:80 nginx:alpine
+```
+`-p` 标记可以多次使用来绑定多个端口
+```
+docker run -d \
+-p 80:80 \
+-p 443:443 \
+nginx:alpine
+```
+
+##### 查看映射端口配置
+使用 `docker port` 来查看当前映射的端口配置，也可以查看到绑定的地址
+```
+docker port fa 80
+```
+
+#### 容器互联
+将容器加入自定义的 Docker 网络来连接多个容器
+
+##### 新建网络
+下面先创建一个新的 Docker 网络
+```
+docker network create -d bridge my-net
+```
+`-d` 参数指定 Docker 网络类型，有 `bridge` `overlay`。
+
+##### 连接容器
+运行一个容器并连接到新建的 `my-net` 网络
+```
+docker run -it --rm --name busybox1 --network my-net busybox sh
+```
+打开新的终端
+```
+docker run -it --rm --name busybox2 --network my-net busybox sh
+```
+再打开一个新的终端查看容器信息
+```
+docker container ls
+```
+在 `busybox1` 容器输入以下命令,用 ping 来测试连接 `busybox2` 容器
+```
+ping busybox2
+```
