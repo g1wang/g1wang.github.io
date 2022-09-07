@@ -293,3 +293,67 @@ docker container ls
 ```
 ping busybox2
 ```
+
+#### 配置 DNS
+Docker 利用虚拟文件来挂载容器的 3 个相关配置文件。在容器中使用 `mount` 命令可以看到挂载信息。这种机制可以让宿主主机 DNS 信息发生更新后，所有 Docker 容器的 DNS 配置通过 `/etc/resolv.conf` 文件立刻得到更新，配置全部容器的 DNS ，也可以在 `/etc/docker/daemon.json` 文件中增加以下内容来设置
+```
+{
+  "dns" : [
+    "114.114.114.114",
+    "8.8.8.8"
+  ]
+}
+```
+
+### Docker Buildx
+**BuildKit** 是下一代的镜像构建组件,该功能仅适用于 Docker v19.03+ 版本
+
+### Docker Compose
+`Docker Compose` 是 Docker 官方编排（Orchestration）项目之一，负责快速的部署分布式应用。
+
+#### 简介
+`Compose` 允许用户通过一个单独的 `docker-compose.yml` 模板文件（YAML 格式）来定义一组相关联的应用容器为一个项目（project）。
+`Compose` 中有两个重要的概念：
+-   服务 (`service`)：一个应用的容器，实际上可以包括若干运行相同镜像的容器实例。
+-   项目 (`project`)：由一组关联的应用容器组成的一个完整业务单元，在 `docker-compose.yml` 文件中定义。
+`Compose` 的默认管理对象是项目，通过子命令对项目中的一组容器进行便捷地生命周期管理。
+
+#### 安装与卸载
+##### linux安装
+二进制包方式安装
+```
+sudo curl -L https://github.com/docker/compose/releases/download/1.27.4/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+
+#国内
+sudo curl -L https://download.fastgit.org/docker/compose/releases/download/1.27.4/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+
+sudo chmod +x /usr/local/bin/docker-compose
+
+#补全命令
+curl -L https://raw.githubusercontent.com/docker/compose/1.27.4/contrib/completion/bash/docker-compose > /etc/bash_completion.d/docker-compose
+```
+
+#####  linux卸载
+二进制包方式安装的，删除二进制文件即可
+```
+sudo rm /usr/local/bin/docker-compose
+```
+
+#### 命令说明
+##### up
+默认情况，`docker-compose up` 启动的容器都在前台，控制台将会同时打印所有容器的输出信息，可以很方便进行调试
+如果使用 `docker-compose up -d`，将会在后台启动并运行所有的容器。一般推荐生产环境下使用该选项。
+
+#### Compose 模板文件
+默认的模板文件名称为 `docker-compose.yml`
+```
+version: "3"
+
+services:
+  webapp:
+    image: examples/web
+    ports:
+      - "80:80"
+    volumes:
+      - "/data"
+```
