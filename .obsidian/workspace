@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Blog/Docker/DockerPrimer.md",
+            "file": "Blog/Docker/Kubernetes.md",
             "mode": "source",
             "source": false
           }
@@ -61,7 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 524.5
   },
   "right": {
     "id": "339a9cbfc0b2e696",
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blog/Docker/DockerPrimer.md",
+                "file": "Blog/Docker/Kubernetes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blog/Docker/DockerPrimer.md",
+                "file": "Blog/Docker/Kubernetes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blog/Docker/DockerPrimer.md"
+                "file": "Blog/Docker/Kubernetes.md"
               }
             }
           }
@@ -128,17 +128,48 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "6215f6c514a2ae36",
+  "floating": {
+    "id": "c0e747a62737171a",
+    "type": "floating",
+    "children": [
+      {
+        "id": "f9120b7aa5d1438f",
+        "type": "window",
+        "children": [
+          {
+            "id": "3cd04bc716655b7c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "readme.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "direction": "vertical",
+        "x": 448,
+        "y": 180,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "a9e0fd7616450e48",
   "lastOpenFiles": [
+    "Blog/Docker/image/Kubernetes1-1.png",
+    "Blog/Docker/Kubernetes.md",
+    "Blog/Docker/ETCD.md",
+    "Blog/Linux/Centos7/Linux查找命令.md",
+    "readme.md",
+    "Blog/Docker/DockerPrimer.md",
+    "Blog/Docker/Docker-WordPress.md",
     "Blog/JAVA/Web/nginx跨域处理.md",
     "Readme.md",
-    "Blog/Linux/Centos7/Centos7-yum源.md",
-    "Blog/Linux/Centos7/Centos7-安装-gitlab.md",
-    "Blog/JAVA/DevTools/Yapi部署并迁移文档.md",
-    "Blog/JAVA/DevTools/SVN-Migrate-To-Git.md",
-    "Blog/JAVA/DevTools/Maven-pom.xml.md",
-    "Blog/JAVA/DevTools/IDEA快捷键.md",
-    "Blog/JAVA/DevTools/IDEA类和方法注释模板设置.md",
-    "Blog/JAVA/SpringBoot/SpringBoot-RestfulAPI.md"
+    "Blog/Linux/Centos7/Centos7-yum源.md"
   ]
 }
