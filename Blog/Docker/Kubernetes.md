@@ -304,7 +304,7 @@ oom_score = 0
 ```
 
 ##### 安装 **kubelet** **kubeadm** **kubectl** **cri-tools** **kubernetes-cni**
-CentOS/Fedora
+###### CentOS/Fedora
 ```
 cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
@@ -322,8 +322,6 @@ EOF
 #参数： repo_gpgcheck=0
 
 sudo yum install -y kubelet kubeadm kubectl
-
-
 ```
 
 ##### 修改内核的运行参数
@@ -340,7 +338,7 @@ sudo sysctl --system
 
 ##### 配置 kubelet
 修改 `kubelet.service`
-`/etc/systemd/system/kubelet.service.d/10-proxy-ipvs.conf` 写入以下内容
+/etc/systemd/system/kubelet.service.d/10-proxy-ipvs.conf 写入以下内容
 ```
 # 启用 ipvs 相关内核模块
 [Service]
@@ -354,3 +352,16 @@ ExecStartPre=-/sbin/modprobe ip_vs_sh
 $ sudo systemctl daemon-reload
 ```
 
+##### 部署
+###### master
+```
+sudo systemctl enable cri-containerd
+sudo systemctl start cri-containerd
+sudo kubeadm init \
+--image-repository registry.cn-hangzhou.aliyuncs.com/google_containers \
+--pod-network-cidr 10.244.0.0/16 \
+--cri-socket /run/cri-containerd/cri-containerd.sock \
+--v 5 \
+--ignore-preflight-errors=all
+
+```
