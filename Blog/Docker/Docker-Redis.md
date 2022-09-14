@@ -31,9 +31,24 @@ sudo docker run -p 6379:6379 --name redis -v /home/devops/data/redis/data:/data 
 ### 进入redis容器内部 进行查看或者操作
 ```
 #默认进入data文件夹
-docker exec -it redis /bin/bash
+sudo docker exec -it redis /bin/bash
+
+# 再进入redis配置文件夹
+cd /etc/redis/
+
+#  连接redis
+sudo docker exec -it redis redis-cli
 ```
 
+### 重启redis
+```
+sudo docker restart redis
+```
+
+### 设置redis跟随docker启动
+```
+sudo docker update redis --restart=always
+```
 
 
 
