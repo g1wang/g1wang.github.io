@@ -6,6 +6,7 @@
 ###  SpringBoot
 #### [SpringBoot-RestfulAPI](./Blog/JAVA/SpringBoot/SpringBoot-RestfulAPI.md)
 #### [SpringBoot参数校验](./Blog/JAVA/SpringBoot/SpringBoot参数校验.md)
+#### [SpringBoot热部署](./Blog/JAVA/SpringBoot/SpringBoot热部署.md)
 
 ### JVM
 #### [JVM_01_Runtime_Data_Area](./Blog/JAVA/JVM/JVM_01_Runtime_Data_Area.md)
