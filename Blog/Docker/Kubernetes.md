@@ -1,13 +1,13 @@
-## Kubernetes
+# Kubernetes
 开源容器编排引擎
 
-### 简介
+## 简介
 管理跨多个主机的容器，提供基本的部署，维护以及应用伸缩
 -   便携：支持公有云，私有云，混合云，以及多种云平台
 -   可拓展：模块化，可插拔，支持钩子，可任意组合
 -   自修复：自动重调度，自动重启，自动复制
 
-### 基本概念
+## 基本概念
 
 ![](./image/Kubernetes1-1.png)
 
@@ -22,16 +22,16 @@
 -  web 界面（`ux`）：用户可以通过 web 界面操作 Kubernetes。
 -  命令行操作（`cli`）：`kubectl`命令。
 
-#### 节点
+### 节点
 在 `Kubernetes` 中，节点是实际工作的点，节点可以是虚拟机或者物理机器，依赖于一个集群环境。每个节点都有一些必要的服务以运行容器组，并且它们都可以通过主节点来管理。必要服务包括 Docker，kubelet 和代理服务。
 
-##### 容器状态
+#### 容器状态
 容器状态用来描述节点的当前状态。现在，其中包含三个信息：
   - 主机IP: 主机 IP 需要云平台来查询，`Kubernetes` 把它作为状态的一部分来保存。如果 `Kubernetes` 没有运行在云平台上，节点 ID 就是必需的
   - 节点周期: 通常来说节点有 `Pending`，`Running`，`Terminated` 三个周期
   - 节点状态: 节点的状态主要是用来描述处于 `Running` 的节点。当前可用的有 `NodeReachable` 和 `NodeReady`
 
-##### 节点管理
+####节点管理
 节点并非 Kubernetes 创建，而是由云平台创建，或者就是物理机器、虚拟机。在 Kubernetes 中，节点仅仅是一条记录，节点创建之后，Kubernetes 会检查其是否可用。在 Kubernetes 中，节点用如下结构保存：
 
 ```
@@ -53,24 +53,24 @@
 
 Kubernetes 校验节点可用依赖于 ID。在当前的版本中，有两个接口可以用来管理节点：节点控制和 Kube 管理。
 
-##### 节点控制
+#### 节点控制
 在 Kubernetes 主节点中，节点控制器是用来管理节点的组件。主要包含：
   -   集群范围内节点同步
   -   单节点生命周期管理
 节点控制有一个同步轮寻，主要监听所有云平台的虚拟实例，会根据节点状态创建和删除。可以通过 `--node_sync_period`标志来控制该轮寻。如果一个实例已经创建，节点控制将会为其创建一个结构。同样的，如果一个节点被删除，节点控制也会删除该结构。在 Kubernetes 启动时可用通过 `--machines`标记来显示指定节点。同样可以使用 `kubectl` 来一条一条的添加节点，两者是相同的。通过设置 `--sync_nodes=false`标记来禁止集群之间的节点同步，你也可以使用 api/kubectl 命令行来增删节点。
 
-#### 容器组
+### 容器组
 在 Kubernetes 中，使用的最小单位是容器组，容器组是创建，调度，管理的最小单位。 一个容器组使用相同的 Docker 容器并共享卷（挂载点）。一个容器组是一个特定应用的打包集合，包含一个或多个容器。
 
-##### 资源共享和通信
+#### 资源共享和通信
 容器组主要是为了数据共享和它们之间的通信。
 在一个容器组中，容器都使用相同的网络地址和端口，可以通过本地网络来相互通信。每个容器组都有独立的 IP，可用通过网络来和其他物理主机或者容器通信。
 容器组有一组存储卷（挂载点），主要是为了让容器在重启之后可以不丢失数据。
 
-##### 容器组管理
+#### 容器组管理
 容器组是一个应用管理和部署的高层次抽象，同时也是一组容器的接口。容器组是部署、水平放缩的最小单位。
 
-##### 容器组的使用
+#### 容器组的使用
 容器组可以通过组合来构建复杂的应用，其本来的意义包含：
   -   内容管理，文件和数据加载以及本地缓存管理等。
   -   日志和检查点备份，压缩，快照等。
@@ -78,50 +78,50 @@ Kubernetes 校验节点可用依赖于 ID。在当前的版本中，有两个接
   -   代理，网桥
   -   控制器，管理，配置以及更新
 
-##### 容器组的生命状态
+#### 容器组的生命状态
 包括若干状态值：`pending`、`running`、`succeeded`、`failed`
 
-### 架构设计
+## 架构设计
 
 Kubernetes 首先是一套分布式系统，由多个节点组成，节点分为两类：一类是属于管理平面的主节点/控制节点（Master Node）；一类是属于运行平面的工作节点（Worker Node）。
 
 ![](./image/Kubernetes-framework-1.png)
 
 
-#### 控制平面
-##### 主节点服务
+### 控制平面
+#### 主节点服务
 主节点上需要提供如下的管理服务：
   -   `apiserver` 是整个系统的对外接口，提供一套 RESTful 的 [Kubernetes API](https://kubernetes.io/zh/docs/concepts/overview/kubernetes-api/)，供客户端和其它组件调用；
   -   `scheduler` 负责对资源进行调度，分配某个 pod 到某个节点上。是 pluggable 的，意味着很容易选择其它实现方式；
   -   `controller-manager` 负责管理控制器，包括 endpoint-controller（刷新服务和 pod 的关联信息）和 replication-controller（维护某个 pod 的复制为配置的数值）。
 
-##### Etcd
+#### Etcd
 这里 Etcd 即作为数据后端，又作为消息中间件。
 通过 Etcd 来存储所有的主节点上的状态信息，很容易实现主节点的分布式扩展。
 组件可以自动的去侦测 Etcd 中的数值变化来获得通知，并且获得更新后的数据来执行相应的操作。
 
-#### 工作节点
+### 工作节点
   -   kubelet 是工作节点执行操作的 agent，负责具体的容器生命周期管理，根据从数据库中获取的信息来管理容器，并上报 pod 运行状态等；
   -   kube-proxy 是一个简单的网络访问代理，同时也是一个 Load Balancer。它负责将访问到某个服务的请求具体分配给工作节点上的 Pod（同一类标签）。
 
 ![](D:\Documents\GitHub\g1wang.github.io\Blog\Docker\image\Kubernetes-framework-2.png)
 
-### 部署 Kubernetes
+## 部署 Kubernetes
 部署 Kubernetes几种方式
   -   kubeadm
   -   docker-desktop
   -   k3s
 
-#### 使用 kubeadm 部署 kubernetes(CRI 使用 containerd)
+### 使用 kubeadm 部署 kubernetes(CRI 使用 containerd)
 `kubeadm` 提供了 `kubeadm init` 以及 `kubeadm join` 这两个命令作为快速创建 `kubernetes` 集群的最佳实践。
 
-##### 安装 containerd
+#### 安装 containerd
 ```
 # rhel 系
 sudo yum install containerd.io
 ```
 
-##### 配置 containerd
+#### 配置 containerd
 新建 `/etc/systemd/system/cri-containerd.service` 文件
 ```
 [Unit]
@@ -303,7 +303,7 @@ oom_score = 0
     async_remove = false
 ```
 
-##### 安装 **kubelet** **kubeadm** **kubectl** **cri-tools** **kubernetes-cni**
+#### 安装 **kubelet** **kubeadm** **kubectl** **cri-tools** **kubernetes-cni**
 ###### CentOS/Fedora
 ```
 cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
@@ -324,7 +324,7 @@ EOF
 sudo yum install -y kubelet kubeadm kubectl
 ```
 
-##### 修改内核的运行参数
+#### 修改内核的运行参数
 ```
 cat <<EOF | sudo tee /etc/sysctl.d/99-kubernetes-cri.conf
 net.bridge.bridge-nf-call-iptables  = 1
@@ -336,7 +336,7 @@ EOF
 sudo sysctl --system
 ```
 
-##### 配置 kubelet
+#### 配置 kubelet
 修改 `kubelet.service`
 /etc/systemd/system/kubelet.service.d/10-proxy-ipvs.conf 写入以下内容
 ```
@@ -349,14 +349,15 @@ ExecStartPre=-/sbin/modprobe ip_vs_sh
 ```
 执行以下命令应用配置。
 ```
-$ sudo systemctl daemon-reload
+sudo systemctl daemon-reload
 ```
 
-##### 部署
+#### 部署
 ###### master
 ```
 sudo systemctl enable cri-containerd
 sudo systemctl start cri-containerd
+
 sudo kubeadm init \
 --image-repository registry.cn-hangzhou.aliyuncs.com/google_containers \
 --pod-network-cidr 10.244.0.0/16 \
@@ -365,3 +366,28 @@ sudo kubeadm init \
 --ignore-preflight-errors=all
 
 ```
+
+-  kubeadm init 可能报错
+```
+1.It seems like the kubelet isn't running or healthy
+
+# check if swap is diabled on your node as you MUST disable swap in order for the kubelet to work properly. 
+
+sudo swapoff -a  
+sudo sed -i '/ swap / s/^/#/' /etc/fstab
+
+# check out if kubernetes and docker cgroup driver is set to same.
+sudo docker info |grep -i cgroup
+
+sudo vim /etc/docker/daemon.json
+
+{
+    "exec-opts": ["native.cgroupdriver=systemd"]
+}
+
+# Restart your docker service
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+sudo systemctl restart kubelet
+```
+
