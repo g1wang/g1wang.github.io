@@ -1,5 +1,10 @@
 # DockerPrimer
 
+## 容器技术生态
+
+![](./image/docker-1.1.png)
+
+
 ## CentOS 安装 Docker
 
 ### 系统要求

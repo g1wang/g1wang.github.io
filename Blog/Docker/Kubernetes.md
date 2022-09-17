@@ -391,3 +391,11 @@ sudo systemctl restart docker
 sudo systemctl restart kubelet
 ```
 
+
+### 部署 Dashboard
+[Kubernetes Dashboard](https://github.com/kubernetes/dashboard) 是基于网页的 Kubernetes 用户界面
+#### 部署
+执行以下命令即可部署 Dashboard
+```
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml
+```
