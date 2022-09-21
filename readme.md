@@ -4,9 +4,9 @@
 ### JAVA Primer
 #### [Enum](./Blog/JAVA/JavaPrimer/Enum.md)
 ###  SpringBoot
-#### [SpringBoot-RestfulAPI](./Blog/JAVA/SpringBoot/SpringBoot-RestfulAPI.md)
-#### [SpringBoot参数校验](./Blog/JAVA/SpringBoot/SpringBoot参数校验.md)
-#### [SpringBoot热部署](./Blog/JAVA/SpringBoot/SpringBoot热部署.md)
+#### [RestfulAPI](./Blog/JAVA/springcloud/RestfulAPI.md)
+#### [SpringBoot-Primer](./Blog/JAVA/springcloud/SpringBoot-Primer.md)
+#### [SpringBoot热部署](./Blog/JAVA/springcloud/SpringBoot热部署.md)
 
 ### JVM
 #### [JVM_01_Runtime_Data_Area](./Blog/JAVA/JVM/JVM_01_Runtime_Data_Area.md)

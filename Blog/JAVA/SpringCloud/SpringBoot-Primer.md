@@ -1,6 +1,8 @@
-## springboot参数校验
+# SpringBoot-Primer
 
-### 注解
+### SpringBoot参数校验
+
+#### 注解
 
 - @Validated注解是Spring基于 @Valid注解的进一步封装,并提供比如分组,分组顺序的高级功能使用位置
 
@@ -8,7 +10,7 @@
   - @Valid注解  可以使用在方法,构造函数,方法参数和成员属性上
   - @Validated注解 :可以用在类型,方法和方法参数上. 但是不能用在成员属性上
 
-### 常用的校验注解
+#### 常用的校验注解
 
 - @Null：被注释的元素必须为null
 - @NotNull：被注释的元素不能为null
@@ -26,3 +28,64 @@
 - @Range：被注释的元素必须在合适的范围内
 - @NotBlank：不能为空，检查时会将空格忽略
 - @NotEmpty：不能为空，这里的空是指空字符串
+
+
+### SpringBoot定时器
+
+#### Scheduled
+##### 基本配置
+- 启动类添加注解 @EnableScheduling
+```
+#main
+@EnableScheduling  
+public class ScheduledSampleApplication {
+
+```
+
+- 定时任务使用 @Scheduled(cron = "${scheduled.printCron}")  
+```
+@Component  
+public class PrintTask {  
+  
+    @Scheduled(cron = "${scheduled.printCron}")  
+    private void doTask(){  
+        System.out.println("print:"+new Date());  
+    }  
+}
+```
+- 配置文件 application.yml
+```
+scheduled:  
+  printCron: "0 35 14 * * ?"
+```
+##### 是否启用定时任务 
+- 定时任务添加 @ConditionalOnProperty
+```
+@Component
+@ConditionalOnProperty(prefix = "scheduled", name = "enabled", havingValue = "true")
+public class PrintTask {  
+  
+    @Scheduled(cron = "${scheduled.printCron}")  
+    private void doTask(){  
+        System.out.println("print:"+new Date());  
+    }  
+}
+```
+- 配置文件
+```
+scheduled:  
+  printCron: "0 12 17 * * ?"  
+  enabled: false
+```
+
+### SpringBoot Property 读取配置的几种方式
+
+####  读取application文件
+- application配置文件
+```
+info.address=Home
+```
+- @Value注解读取方式
+```
+
+```
