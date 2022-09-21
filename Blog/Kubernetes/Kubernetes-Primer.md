@@ -1,4 +1,4 @@
-# Kubernetes
+# Kubernetes-Primer
 开源容器编排引擎
 
 ## 简介
@@ -9,7 +9,7 @@
 
 ## 基本概念
 
-![](./image/Kubernetes1-1.png)
+![](Kubernetes1-1.png)
 
 -  节点（`Node`）：一个节点是一个运行 Kubernetes 中的主机。
 -  容器组（`Pod`）：一个 Pod 对应于由若干容器组成的一个容器组，同个组内的容器共享一个存储卷(volume)。
@@ -85,7 +85,7 @@ Kubernetes 校验节点可用依赖于 ID。在当前的版本中，有两个接
 
 Kubernetes 首先是一套分布式系统，由多个节点组成，节点分为两类：一类是属于管理平面的主节点/控制节点（Master Node）；一类是属于运行平面的工作节点（Worker Node）。
 
-![](./image/Kubernetes-framework-1.png)
+![](Kubernetes-framework-1.png)
 
 
 ### 控制平面
@@ -153,6 +153,11 @@ WantedBy=multi-user.target
 ```
 
 新建 `/etc/cri-containerd/config.toml` containerd 配置文件
+```
+sudo mkdir -p  /etc/cri-containerd
+sudo vim /etc/cri-containerd/config.toml
+```
+
 ```
 version = 2
 # persistent data location
@@ -340,6 +345,11 @@ sudo sysctl --system
 修改 `kubelet.service`
 /etc/systemd/system/kubelet.service.d/10-proxy-ipvs.conf 写入以下内容
 ```
+sudo mkdir -p /etc/systemd/system/kubelet.service.d/
+sudo vim /etc/systemd/system/kubelet.service.d/10-proxy-ipvs.conf
+```
+
+```
 # 启用 ipvs 相关内核模块
 [Service]
 ExecStartPre=-/sbin/modprobe ip_vs
@@ -391,6 +401,19 @@ sudo systemctl restart docker
 sudo systemctl restart kubelet
 ```
 
+### node 工作节点
+在 **另一主机** 重复 **部署** 小节以前的步骤，安装配置好 kubelet。根据提示，加入到集群
+
+```
+sudo systemctl enable cri-containerd
+
+sudo systemctl start cri-containerd
+
+sudo kubeadm join 192.168.86.75:6443 \
+    --token cz81zt.orsy9gm9v649e5lf \
+    --discovery-token-ca-cert-hash sha256:5edb316fd0d8ea2792cba15cdf1c899a366f147aa03cba52d4e5c5884ad836fe \
+    --cri-socket /run/cri-containerd/cri-containerd.sock
+```
 
 ### 部署 Dashboard
 [Kubernetes Dashboard](https://github.com/kubernetes/dashboard) 是基于网页的 Kubernetes 用户界面

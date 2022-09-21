@@ -26,6 +26,10 @@
 ## MySQL
 #### [MySQL安装](./Blog/MySQL/mysql安装.md)
 #### [MySQL规范](./Blog/MySQL/mysql规范.md)
+#### [MySQL-Primer](./Blog/MySQL/MySQL-Primer.md)
+
+## MongoDB
+#### [MongoDB-Primer](./Blog/MongoDB/MongoDB-Primer.md)
 
 ## MQ
 #### [MQTT](./Blog/MQ/MQTT.md)
@@ -51,4 +55,6 @@
 #### [CentOS7安装Docker](./Blog/Docker/CentOS7安装Docker.md)
 #### [Docker-WordPress](./Blog/Docker/Docker-WordPress.md)
 #### [ETCD](./Blog/Docker/ETCD.md)
-#### [Kubernetes](./Blog/Docker/Kubernetes.md)
+
+## Kubernetes
+#### [Kubernetes-Primer](./Blog/Kubernetes/Kubernetes-Primer.md)
