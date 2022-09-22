@@ -134,14 +134,43 @@ sudo systemctl restart docker
 ```
 # docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]
 docker pull ubuntu:18.04
-
 ```
 #### 运行镜像
 ```
 docker run ubuntu:18.04
 ```
 
+### ## docker commit定制镜像
+镜像是容器的基础，每次执行`docker run`的时候都会指定哪个镜像作为容器运行的基础。在之前的例子中，我们所使用的都是来自于 Docker Hub 的镜像。直接使用这些镜像是可以满足一定的需求，而当这些镜像无法直接满足需求时，我们就需要定制这些镜像
+#### 以定制一个 Web 服务器为例子
+- 用 nginx 镜像启动一个容器，命名为 webserver,并且映射了 80 端口,用浏览器去访问这个 nginx 服务器
+```
+docker run --name webserver -d -p 80:80 nginx
+```
+- 使用 docker exec命令进入容器，修改其内容,再刷新浏览器的话，会发现内容被改变了
+```
+docker exec -it webserver bash
+root@3729b97e8226:/# echo '<h1>Hello, Docker!</h1>' > /usr/share/nginx/html/index.html
+root@3729b97e8226:/# exit
+```
+
+- 使用Docker commit 将容器的存储层保存下来成为镜像
+```
+docker commit \
+    --author "ww" \
+    --message "修改了默认首页" \
+    webserver \
+    nginx:v2
+```
+
+- 新的镜像定制好后，我们可以来运行这个镜像
+```
+docker run --name webserv2 -d -p 81:80 nginx:v2
+```
+
+
 ### 使用 Dockerfile 定制镜像
+可以把每一层修改、安装、构建、操作的命令都写入一个脚本，用这个脚本来构建、定制镜像。Dockerfile 是一个文本文件，其内包含了一条条的指令(Instruction)，每一条指令构建一层，因此每一条指令的内容，就是描述该层应当如何构建。
 
 
 ## 操作容器
