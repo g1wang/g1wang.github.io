@@ -150,6 +150,10 @@ docker run ubuntu:18.04
 # docker run
 docker run ubuntu:18.04
 
+# docker run -it --rm ubuntu:16.04 /bin/bash
+# -it：这是两个参数，一个是 -i：交互式操作，一个是 -t 终端。我们这里打算进入 bash 执行一些命令并查看返回结果，因此我们需要交互式终端
+# --rm：这个参数是说容器退出后随之将其删除。默认情况下，为了排障需求，退出的容器并不会立即删除，除非手动 docker rm。
+
 # -d 后台运行
 docker run -d ubuntu:18.04
 ```
@@ -169,6 +173,21 @@ docker run -d ubuntu:18.04
 # docker container start
 # docker container restart
 ```
+### 进入容器
+在使用`-d`参数时，容器启动后会进入后台。某些时候需要进入容器进行操作：**exec 命令 -i -t 参数**，如果从这个 stdin 中 exit，不会导致容器的停止
+```
+sudo docker exec -it 571e bash
+```
+### 删除容器
+```
+# 删除一个处于终止状态的容器
+docker container rm [name]
+
+docker container prune 
+# 
+```
+
+
 
 ## 数据管理
 ### 数据卷
