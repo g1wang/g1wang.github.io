@@ -140,7 +140,7 @@ docker pull ubuntu:18.04
 docker run ubuntu:18.04
 ```
 
-### ## docker commit定制镜像
+###  docker commit定制镜像
 镜像是容器的基础，每次执行`docker run`的时候都会指定哪个镜像作为容器运行的基础。在之前的例子中，我们所使用的都是来自于 Docker Hub 的镜像。直接使用这些镜像是可以满足一定的需求，而当这些镜像无法直接满足需求时，我们就需要定制这些镜像
 #### 以定制一个 Web 服务器为例子
 - 用 nginx 镜像启动一个容器，命名为 webserver,并且映射了 80 端口,用浏览器去访问这个 nginx 服务器
@@ -171,7 +171,113 @@ docker run --name webserv2 -d -p 81:80 nginx:v2
 
 ### 使用 Dockerfile 定制镜像
 可以把每一层修改、安装、构建、操作的命令都写入一个脚本，用这个脚本来构建、定制镜像。Dockerfile 是一个文本文件，其内包含了一条条的指令(Instruction)，每一条指令构建一层，因此每一条指令的内容，就是描述该层应当如何构建。
+以之前定制 nginx 镜像为例，这次我们使用 Dockerfile 来定制。在一个空白目录中，建立一个文本文件，并命名为 Dockerfile
+```
+mkdir mynginx
+cd mynginx
+touch Dockerfile
+```
 
+Dockerfile 内容
+```
+FROM nginx
+RUN echo '<h1>Hello, Docker!</h1>' > /usr/share/nginx/html/index.html
+```
+
+#### FROM 指定基础镜像
+以一个镜像为基础，在其上进行定制.`FROM`就是指定基础镜像，因此一个 Dockerfile 中 FROM 是必备的指令，并且必须是第一条指令。
+除了选择现有镜像为基础镜像外，Docker 还存在一个特殊的镜像，名为`scratch`。这个镜像是虚拟的概念，并不实际存在，它表示一个空白的镜像。
+如果你以`scratch`为基础镜像的话，意味着你不以任何镜像为基础，接下来所写的指令将作为镜像第一层开始存在。有的同学可能感觉很奇怪，没有任何基础镜像，我怎么去执行我的程序呢，其实对于 Linux 下静态编译的程序来说，并不需要有操作系统提供运行时支持，所需的一切库都已经在可执行文件里了，因此直接`FROM scratch`会让镜像体积更加小巧。使用 Go 语言 开发的应用很多会使用这种方式来制作镜像，这也是为什么有人认为 Go 是特别适合容器微服务架构的语言的原因之一。
+
+#### RUN 执行命令
+`RUN`指令是用来执行命令行命令的。由于命令行的强大能力，`RUN`指令在定制镜像时是最常用的指令之一。其格式有两种：
+- shell 格式：RUN <命令>，就像直接在命令行中输入的命令一样。刚才写的 Dockerfile 中的 RUN 指令就是这种格式。
+```
+RUN echo '<h1>Hello, Docker!</h1>' > /usr/share/nginx/html/index.html
+```
+- exec 格式：RUN ["可执行文件", "参数1", "参数2"]，这更像是函数调用中的格式。 既然 RUN 就像 Shell 脚本一样可以执行命令，那么我们是否就可以像 Shell 脚本一样把每个命令对应一个 RUN 呢？比如这样：
+```
+FROM debian:jessie
+RUN apt-get update
+RUN apt-get install -y gcc libc6-dev make
+RUN wget -O redis.tar.gz "http://download.redis.io/releases/redis-3.2.5.tar.gz"
+RUN mkdir -p /usr/src/redis
+RUN tar -xzf redis.tar.gz -C /usr/src/redis --strip-components=1
+RUN make -C /usr/src/redis
+RUN make -C /usr/src/redis install
+```
+之前说过，Dockerfile 中每一个指令都会建立一层，RUN 也不例外。每一个 RUN 的行为，就和刚才我们手工建立镜像的过程一样：新建立一层，在其上执行这些命令，执行结束后，commit 这一层的修改，构成新的镜像。
+而上面的这种写法，创建了 7 层镜像。这是完全没有意义的，而且很多运行时不需要的东西，都被装进了镜像里，比如编译环境、更新的软件包等等。结果就是产生非常臃肿、非常多层的镜像，不仅仅增加了构建部署的时间，也很容易出错。 这是很多初学 Docker 的人常犯的一个错误。
+上面的 Dockerfile 正确的写法应该是这样：
+```
+FROM debian:jessie
+RUN buildDeps='gcc libc6-dev make' \
+    && apt-get update \
+    && apt-get install -y $buildDeps \
+    && wget -O redis.tar.gz "http://download.redis.io/releases/redis-3.2.5.tar.gz" \
+    && mkdir -p /usr/src/redis \
+    && tar -xzf redis.tar.gz -C /usr/src/redis --strip-components=1 \
+    && make -C /usr/src/redis \
+    && make -C /usr/src/redis install \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm redis.tar.gz \
+    && rm -r /usr/src/redis \
+    && apt-get purge -y --auto-remove $buildDeps
+```
+
+#### 构建镜像
+在 Dockerfile 文件所在目录执行
+```
+docker build -t nginx:v3 .
+```
+#### 镜像构建上下文（Context）
+ docker build 命令最后有一个`.`。`.`表示当前目录，而 Dockerfile 就在当前目录，因此不少初学者以为这个路径是在指定 Dockerfile 所在路径，这么理解其实是不准确的。如果对应上面的命令格式，你可能会发现，这是在指定上下文路径.
+ docker build 的工作原理。Docker 在运行时分为 Docker 引擎（也就是服务端守护进程）和客户端工具。Docker 的引擎提供了一组 REST API，被称为 Docker Remote API，而如 docker 命令这样的客户端工具，则是通过这组 API 与 Docker 引擎交互，从而完成各种功能。因此，虽然表面上我们好像是在本机执行各种 docker 功能，但实际上，一切都是使用的远程调用形式在服务端（Docker 引擎）完成。也因为这种 C/S 设计，让我们操作远程服务器的 Docker 引擎变得轻而易举。
+ 当我们进行镜像构建的时候，并非所有定制都会通过 RUN 指令完成，经常会需要将一些本地文件复制进镜像，比如通过 COPY 指令、ADD 指令等。而 docker build 命令构建镜像，其实并非在本地构建，而是在服务端，也就是 Docker 引擎中构建的。那么在这种客户端/服务端的架构中，如何才能让服务端获得本地文件呢？
+这就引入了上下文的概念。当构建的时候，用户会指定构建镜像上下文的路径，docker build 命令得知这个路径后，会将路径下的所有内容打包，然后上传给 Docker 引擎。这样 Docker 引擎收到这个上下文包后，展开就会获得构建镜像所需的一切文件。
+如果在 Dockerfile 中这么写：
+```
+COPY ./package.json /app/
+```
+这并不是要复制执行 docker build 命令所在的目录下的 package.json，也不是复制 Dockerfile 所在目录下的 package.json，而是复制 上下文（context） 目录下的 package.json。
+
+###  私有镜像仓库
+#### Docker Hub
+目前 Docker 官方维护了一个公共仓库`Docker Hub`
+#### 私有仓库
+`docker-registry`是官方提供的工具，可以用于构建私有的镜像仓库
+```
+sudo docker run -d -p 5000:5000 --restart=always --name registry registry
+```
+
+默认情况下，仓库会被创建在容器的`/var/lib/registry`目录下。你可以通过 -v 参数来将镜像文件存放在本地的指定路径
+```
+sudo docker run -d \
+    -p 5000:5000 \
+    -v /opt/data/registry:/var/lib/registry \
+    registry
+```
+#####  在私有仓库上传、搜索、下载镜像
+创建好私有仓库之后，就可以使用`docker tag`来标记一个镜像，然后推送它到仓库。先在本机查看已有的镜像
+```
+sudo docker image ls
+```
+使用docker tag 为镜像打标签， 格式为 docker tag IMAGE[:TAG] [REGISTRY_HOST[:REGISTRY_PORT]/]REPOSITORY[:TAG]
+```
+$ sudo docker tag nginx:v3 127.0.0.1:5000/nginx:v3
+$ sudo docker image ls
+REPOSITORY             TAG       IMAGE ID       CREATED        SIZE
+127.0.0.1:5000/nginx   v3        373a3ce2efb9   21 hours ago   142MB
+```
+使用`docker push`上传标记的镜像
+```
+sudo docker push 127.0.0.1:5000/nginx:v3
+```
+用`curl`查看仓库中的镜像
+```
+$ curl 127.0.0.1:5000/v2/_catalog
+{"repositories":["nginx"]}
+```
 
 ## 操作容器
 ### 启动 
@@ -211,9 +317,8 @@ sudo docker exec -it 571e bash
 ```
 # 删除一个处于终止状态的容器
 docker container rm [name]
-
+#自动清理终止的容器
 docker container prune 
-# 
 ```
 
 
