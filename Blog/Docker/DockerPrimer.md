@@ -278,18 +278,36 @@ sudo docker push 127.0.0.1:5000/nginx:v3
 $ curl 127.0.0.1:5000/v2/_catalog
 {"repositories":["nginx"]}
 ```
+运行私库中的镜像
+```
+sudo docker run --name webserv3 -d -p 83:80 127.0.0.1:5000/nginx:v3
+```
+####  注意事项
+ Docker 默认不允许非 HTTPS 方式推送镜像。我们可以通过 Docker 的配置选项来取消这个限制，对于使用 systemd 的系统（centos7为例），请在`/etc/docker/daemon.json`中写入如下内容（如果文件不存在请新建该文件）
+ ```
+{
+  "registry-mirror": [
+    "https://registry.docker-cn.com"
+  ],
+  "insecure-registries": [
+    "192.168.199.100:5000"
+  ]
+}
+```
+
+
 
 ## 操作容器
 ### 启动 
 ```
-# docker run
+#docker run
 docker run ubuntu:18.04
 
-# docker run -it --rm ubuntu:16.04 /bin/bash
-# -it：这是两个参数，一个是 -i：交互式操作，一个是 -t 终端。我们这里打算进入 bash 执行一些命令并查看返回结果，因此我们需要交互式终端
-# --rm：这个参数是说容器退出后随之将其删除。默认情况下，为了排障需求，退出的容器并不会立即删除，除非手动 docker rm。
+#docker run -it --rm ubuntu:16.04 /bin/bash
+#-it：这是两个参数，一个是 -i：交互式操作，一个是 -t 终端。我们这里打算进入 bash 执行一些命令并查看返回结果，因此我们需要交互式终端
+#--rm：这个参数是说容器退出后随之将其删除。默认情况下，为了排障需求，退出的容器并不会立即删除，除非手动 docker rm。
 
-# -d 后台运行
+#-d 后台运行
 docker run -d ubuntu:18.04
 ```
 当利用 `docker run` 来创建容器时，Docker 在后台运行的标准操作包括：
@@ -304,9 +322,9 @@ docker run -d ubuntu:18.04
 
 ### 终止
 ```
-# docker container stop
-# docker container start
-# docker container restart
+#docker container stop
+#docker container start
+#docker container restart
 ```
 ### 进入容器
 在使用`-d`参数时，容器启动后会进入后台。某些时候需要进入容器进行操作：**exec 命令 -i -t 参数**，如果从这个 stdin 中 exit，不会导致容器的停止
@@ -315,7 +333,7 @@ sudo docker exec -it 571e bash
 ```
 ### 删除容器
 ```
-# 删除一个处于终止状态的容器
+#删除一个处于终止状态的容器
 docker container rm [name]
 #自动清理终止的容器
 docker container prune 
@@ -362,10 +380,10 @@ docker inspect web
 
 #### 删除数据卷
 ```
-# 删除指定的数据卷
+#删除指定的数据卷
 docker volume rm my-vol
 
-# 清理无主的数据卷
+#清理无主的数据卷
 sudo docker volume prune
 ```
 
