@@ -257,7 +257,7 @@ sudo docker run -d \
     -v /opt/data/registry:/var/lib/registry \
     registry
 ```
-#####  在私有仓库上传、搜索、下载镜像
+##### 在私有仓库上传、搜索、下载镜像
 创建好私有仓库之后，就可以使用`docker tag`来标记一个镜像，然后推送它到仓库。先在本机查看已有的镜像
 ```
 sudo docker image ls
@@ -282,9 +282,10 @@ $ curl 127.0.0.1:5000/v2/_catalog
 ```
 sudo docker run --name webserv3 -d -p 83:80 127.0.0.1:5000/nginx:v3
 ```
-####  注意事项
+#### 注意事项
  Docker 默认不允许非 HTTPS 方式推送镜像。我们可以通过 Docker 的配置选项来取消这个限制，对于使用 systemd 的系统（centos7为例），请在`/etc/docker/daemon.json`中写入如下内容（如果文件不存在请新建该文件）
- ```
+ 
+```
 {
   "registry-mirror": [
     "https://registry.docker-cn.com"
@@ -293,11 +294,12 @@ sudo docker run --name webserv3 -d -p 83:80 127.0.0.1:5000/nginx:v3
     "192.168.199.100:5000"
   ]
 }
+
 ```
 
 
-
 ## 操作容器
+
 ### 启动 
 ```
 #docker run
@@ -591,3 +593,6 @@ Docker 创建一个容器的时候，会执行如下操作：
 -   本地主机一端桥接到默认的 docker0 或指定网桥上，并具有一个唯一的名字，如 veth65f9；
 -   容器一端放到新容器中，并修改名字作为 eth0，这个接口只在容器的命名空间可见；
 -   从网桥可用地址段中获取一个空闲地址分配给容器的 eth0，并配置默认路由到桥接网卡 veth65f9。
+
+
+[]
