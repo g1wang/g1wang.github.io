@@ -7,8 +7,12 @@
         "id": "a9e0fd7616450e48",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Blog/Kubernetes/Kubernetes环境部署.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -73,6 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Blog/Kubernetes/Kubernetes环境部署.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Blog/Kubernetes/Kubernetes环境部署.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -110,7 +116,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Blog/Kubernetes/Kubernetes环境部署.md"
+              }
             }
           }
         ],
@@ -120,17 +128,17 @@
     "direction": "horizontal",
     "width": 302.5
   },
-  "active": "f200c374d0808dc6",
+  "active": "a9e0fd7616450e48",
   "lastOpenFiles": [
+    "README.md",
+    "Blog/Kubernetes/Kubernetes环境部署.md",
+    "Blog/Kubernetes/Kubernetes-Primer.md",
+    "Blog/JAVA/DevTools/SVN使用教程.md",
     "Blog/Docker/DockerPrimer.md",
+    "Blog/Docker/Docker-WordPress.md",
+    "Blog/Docker/Docker-Redis.md",
     "Blog/Docker/CentOS7安装Docker.md",
     "Blog/Docker/ETCD.md",
-    "README.md",
-    "Blog/JAVA/JavaPrimer/Enum.md",
-    "Blog/JAVA/JavaPrimer/Java-IO.md",
-    "Blog/JAVA/JavaPrimer/Java-Primer.md",
-    "Blog/JAVA/SpringCloud/SpringBoot-Primer.md",
-    "Blog/JAVA/SpringCloud/SpringBoot热部署.md",
-    "Blog/JAVA/SpringCloud/RestfulAPI.md"
+    "Blog/JAVA/JavaPrimer/Enum.md"
   ]
 }
