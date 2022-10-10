@@ -132,6 +132,10 @@ Kubernetes 首先是一套分布式系统，由多个节点组成，节点分为
 
 ![](./images/Kubernetes-framework-1.png)
 
+![](./images/k8s-structure.jpeg)
+
+
+
 
 ### 控制平面 Master
 #### Master 主节点服务
