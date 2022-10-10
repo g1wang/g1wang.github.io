@@ -78,7 +78,7 @@ scheduled:
   enabled: false
 ```
 
-### SpringBoot Property 读取配置的几种方式
+### SpringBoot Property 读取配置
 
 ####  读取application文件
 - application配置文件
