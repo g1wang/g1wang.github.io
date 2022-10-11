@@ -53,8 +53,10 @@ sudo sed -i 's/download.docker.com/mirrors.aliyun.com\/docker-ce/g' /etc/yum.rep
 更新 `yum` 软件源缓存，并安装 `docker-ce`
 
 ```
+#更新yum软件源缓存
 yum clean all
 yum makecache
+# 安装 docker-ce
 sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 
@@ -91,7 +93,7 @@ docker run --rm hello-world
 1.查看是否在 `docker.service` 文件中配置过镜像地址
 
 ```
-systemctl cat docker | grep '\-\-registry\-mirror'
+systemctl cat docker | grep '--registry-mirror'
 ```
 
 如果该命令有输出，那么请执行 `$ systemctl cat docker` 查看 `ExecStart=` 出现的位置，修改对应的文件内容去掉 `--registry-mirror` 参数及其值

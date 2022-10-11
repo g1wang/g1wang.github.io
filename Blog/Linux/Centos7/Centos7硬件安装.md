@@ -81,12 +81,6 @@ echo  "/dev/sdb  /home/lee/dev  ext4  defaults  0  0"  >>  /etc/fstab
 ll  /home/lee/dev
 ```
 
-
-
-
-
-
-
 ```
 mount  /dev/vdb1  /home/deploy/dataDiskb
 ```

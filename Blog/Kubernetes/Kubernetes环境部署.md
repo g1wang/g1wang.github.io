@@ -1,15 +1,43 @@
-## 部署 Kubernetes
-部署 Kubernetes几种方式
-  -   kubeadm
-  -   docker-desktop
-  -   k3s
+# Kubernetes部署
+## Centos7初始环境配置
+
+### 用户管理
+#### 添加授权 
+```
+#添加 sudoers 文件可写权限
+chmod -v u+w /etc/sudoers
+#修改 sudoers 文件
+vi /etc/sudoers
+#添加授权
+#[用户名]    ALL=(ALL)    ALL 
+devops    ALL=(ALL)       ALL
+#收回 sudoers 文件可写权限
+chmod -v u-w /etc/sudoers
+```
+
+
+## kubeadm 部署 Kubernetes
 
 ### 使用 kubeadm 部署 kubernetes(CRI 使用 containerd)
 `kubeadm` 提供了 `kubeadm init` 以及 `kubeadm join` 这两个命令作为快速创建 `kubernetes` 集群的最佳实践。
 
+#### 添加 yum 源 
+```
+sudo yum install -y yum-utils
+#使用国内源
+sudo yum-config-manager \
+    --add-repo \
+    https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+
+sudo sed -i 's/download.docker.com/mirrors.aliyun.com\/docker-ce/g' /etc/yum.repos.d/docker-ce.repo
+#更新yum软件源缓存
+yum clean all
+yum makecache
+```
+
 #### 安装 containerd
 ```
-# rhel 系
+#rhel系
 sudo yum install containerd.io
 ```
 
@@ -212,7 +240,6 @@ gpgcheck=1
 repo_gpgcheck=1
 gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
 EOF
-
 
 # 如果使用镜像会报错，验证的GPG key验证问题
 #修改 /etc/yum.repos.d/kubernetes.repo 
