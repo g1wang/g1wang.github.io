@@ -83,9 +83,115 @@ scheduled:
 ####  读取application文件
 - application配置文件
 ```
-info.address=Home
+info.title=Home
 ```
-- @Value注解读取方式
+- 方式一：@Value注解读取方式
+```
+@Component  
+public class InfoConfigValue {  
+    @Value("${info.title}")  
+    private String title;  
+    
 ```
 
+- 方式二：@ConfigurationProperties注解读取方式
+```
+@Component  
+@ConfigurationProperties(prefix = "info")  
+public class InfoConfigProp {  
+    private String title;
+```
+
+#### 读取指定文件
+- 方式一： @PropertySource+@Value注解读取方式
+```
+@Component  
+@PropertySource(value = {"config/db-config.properties"})  
+public class DBConfigValue {  
+  
+    @Value("${db.username}")  
+    private String username;
+```
+
+- 方式二：@PropertySource+@ConfigurationProperties注解读取方式
+```
+@Component  
+@ConfigurationProperties(prefix = "db")  
+@PropertySource(value = {"config/db-config.properties"})  
+public class DBConfigProp {  
+  
+    private String username;
+```
+
+#### Profile不同环境配置
+假如有开发、测试、生产三个不同的环境，需要定义三个不同环境下的配置。
+
+##### 基于properties文件类型
+你可以另外建立3个环境下的配置文件：
+applcation.properties
+application-dev.properties
+application-test.properties
+application-prod.properties
+然后在applcation.properties文件中指定当前的环境spring.profiles.active=test,这时候读取的就是application-test.properties文件。
+
+##### 基于yml文件类型
+只需要一个applcation.yml文件就能搞定，推荐此方式。
+```
+info:  
+  title: "prop-sample"  
+  company: "stars"  
+  
+spring:  
+  profiles:  
+    active: prod  
+      
+---  
+spring:  
+  config:  
+    activate:  
+      on-profile: dev  
+server:  
+  port:  
+  8080  
+---  
+spring:  
+  config:  
+    activate:  
+      on-profile: test  
+server:  
+  port: 8081  
+  
+---  
+spring:  
+  config:  
+    activate:  
+      on-profile: prod  
+  
+  profiles:  
+    include:  
+      - proddb  
+      - prodmq  
+server:  
+  port: 8082  
+---  
+  
+spring:  
+  config:  
+    activate:  
+      on-profile: proddb  
+db:  
+  name: mysql  
+  
+---  
+spring:  
+  config:  
+    activate:  
+      on-profile: prodmq  
+mq:  
+  address: localhost
+```
+
+##### jar运行方式
+```
+java -jar xx.jar --spring.profiles.active=prod
 ```

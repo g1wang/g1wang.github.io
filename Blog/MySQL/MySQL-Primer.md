@@ -58,3 +58,12 @@ select num from a where exists(select 1 from b where num=a.num)
 - 1.对大表定期执行ANALYZE TABLE(更新表统计信息)、OPTIMIZE TABLE(优化表存储，减少存储碎片，InnoDB应该使用ALTER TABLE TABLE.name ENGINE='InnoDB' )有利于查询优化器对QL进行优化（数据库空闲时执行，尤其是OPTIMIZE TABLE语句）
 - 2.一个大表设计的时候应当考虑，将经常被检索的字段放一起，不经常被检索的应当设计一个从表，有需要时再做关联、 不同表中用于关联的列应当保持一致的数据类型
 
+## MySql 千万级别表优化
+优化顺序：
+- 1）优化sql和索引
+- 2）加缓存，redis等
+- 3）读写分离
+- 4）垂直拆分，业务上做拆分
+- 5）水平切分，针对数据量大的表，这一步最麻烦，最能考验技术水平，要选择一个合理的sharding key,为了有好的查询效率，表结构也要改动，做一定的冗余，应用也要改，sql中尽量带sharding key，将数据定位到限定的表上去查，而不是扫描全部的表
+- 6）
+
