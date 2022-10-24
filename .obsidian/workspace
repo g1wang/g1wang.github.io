@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Blog/MongoDB/MongoDB-CentOS7-安装.md",
+            "file": "Blog/JAVA/SpringCloud/SpringBoot-Primer.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blog/MongoDB/MongoDB-CentOS7-安装.md",
+                "file": "Blog/JAVA/SpringCloud/SpringBoot-Primer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blog/MongoDB/MongoDB-CentOS7-安装.md",
+                "file": "Blog/JAVA/SpringCloud/SpringBoot-Primer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blog/MongoDB/MongoDB-CentOS7-安装.md"
+                "file": "Blog/JAVA/SpringCloud/SpringBoot-Primer.md"
               }
             }
           }
@@ -130,6 +130,7 @@
   },
   "active": "5b3f3c8e3637f71e",
   "lastOpenFiles": [
+    "Blog/MongoDB/MongoDB-CentOS7-安装.md",
     "Blog/MySQL/MySQL-Primer.md",
     "Blog/MySQL/mysql规范.md",
     "Blog/MySQL/mysql安装.md",
@@ -138,7 +139,6 @@
     "Blog/Kubernetes/Kubernetes环境部署.md",
     "Blog/Docker/DockerPrimer.md",
     "Blog/Linux/Centos7/Centos7_Tengine安装.md",
-    "Blog/Linux/Centos7/Linux查看日志.md",
-    "Blog/Linux/Centos7/Linux_SSH限制IP登录.md"
+    "Blog/Linux/Centos7/Linux查看日志.md"
   ]
 }
