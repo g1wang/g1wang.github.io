@@ -74,11 +74,14 @@ sudo rpm -ivh MySQL-server-*.el7.x86_64.rpm
 
 ### 4、修改密码。
 
-​	`root默认密码 /root/.mysql_secret`
+- `root默认密码 sudo cat /root/.mysql_secret`
 
 （1）查看mysql服务状态：
 
-​	`systemctl status mysqlmysql -u root -p`
+```
+systemctl status mysql
+mysql -u root -p
+```
 
 （2）执行以下命令修改密码：
 

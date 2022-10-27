@@ -1,6 +1,4 @@
-## Centos7服务器硬件安装
-
-
+## Centos7磁盘管理
 
 ### centos7磁盘分区、格式化、挂载
 
@@ -89,3 +87,62 @@ mount  /dev/vdb1  /home/deploy/dataDiskb
 echo  "/dev/vdb1  /home/deploy/dataDiskb  ext4  defaults  0  0"  >>  /etc/fstab
 ```
 
+### centos7磁盘扩容
+
+```
+1.查看当前的磁盘分区情况
+
+fdisk -l /dev/sda
+
+2.开始进行新的分区
+
+fdisk /dev/sda
+
+ n,p,3,w
+
+3. 重新启动系统
+
+reboot
+
+4. 查看当前的磁盘分区情况
+
+fdisk -l /dev/sda
+
+5. 为这个新分区创建一个物理卷Volume
+
+pvcreate /dev/sda3
+
+6.把物理卷(volume)扩展到新的物理卷，vgdisplay 来查看已有的系统Volume Group的情况
+
+vgdisplay
+
+7.扩展以后的Volume Group到新的物理磁盘卷Volume上
+
+vgextend centos /dev/sda3
+
+8.看看目前已有的逻辑卷(Logic Volume)的情况
+
+lvdisplay
+
+9.扩展逻辑分区
+
+lvextend /dev/centos/root /dev/sda3
+
+10.确认文件系统是xfs
+
+cat /etc/fstab | grep root
+
+11.最后将文件系统resize到新的逻辑卷上来
+
+xfs_growfs /dev/centos/root
+
+12.
+
+reboot
+
+13.
+
+fdisk -l /dev/sda
+
+df -h
+```

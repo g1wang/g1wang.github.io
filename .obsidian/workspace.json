@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/MySQL/mysql规范.md",
+                "file": "Blog/MySQL/mysql安装.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blog/MySQL/mysql规范.md",
+                "file": "Blog/MySQL/mysql安装.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blog/MySQL/mysql规范.md",
+                "file": "Blog/MySQL/mysql安装.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blog/MySQL/mysql规范.md"
+                "file": "Blog/MySQL/mysql安装.md"
               }
             }
           }
@@ -136,20 +136,17 @@
     "direction": "horizontal",
     "width": 302.5
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
   "active": "5b3f3c8e3637f71e",
   "lastOpenFiles": [
+    "Blog/Linux/Centos7/Centos7硬件安装.md",
+    "Blog/MySQL/mysql规范.md",
     "Blog/MySQL/mysql安装.md",
     "Blog/Linux/Centos7/Centos7用户管理.md",
     "Blog/JAVA/SpringCloud/SpringBoot-Primer.md",
     "Blog/MongoDB/MongoDB-CentOS7-安装.md",
     "Blog/JAVA/DevTools/Maven-pom.xml.md",
     "Blog/MySQL/MySQL-Primer.md",
-    "Blog/MySQL/mysql规范.md",
     "Blog/JAVA/DevTools/Idea Plugins.md",
-    "Blog/Kubernetes/Kubernetes环境部署.md",
-    "Blog/Docker/DockerPrimer.md"
+    "Blog/Kubernetes/Kubernetes环境部署.md"
   ]
 }
