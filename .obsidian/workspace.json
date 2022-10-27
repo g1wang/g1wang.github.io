@@ -1,0 +1,155 @@
+{
+  "main": {
+    "id": "dc1fdd562104519f",
+    "type": "split",
+    "children": [
+      {
+        "id": "06aa1714969db2f3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5b3f3c8e3637f71e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Blog/MySQL/mysql规范.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "84f52e061887e52c",
+    "type": "split",
+    "children": [
+      {
+        "id": "9ff3c99f688453e4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f200c374d0808dc6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a47bd0d3e1b550e1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "91b95a5f31417807",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 325.5
+  },
+  "right": {
+    "id": "339a9cbfc0b2e696",
+    "type": "split",
+    "children": [
+      {
+        "id": "9f1888d72646bb95",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "49c550394bccbc19",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Blog/MySQL/mysql规范.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3e7c2f34c60bfb1a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Blog/MySQL/mysql规范.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "97a94c19b31aac04",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "6215f6c514a2ae36",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Blog/MySQL/mysql规范.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 302.5
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "5b3f3c8e3637f71e",
+  "lastOpenFiles": [
+    "Blog/MySQL/mysql安装.md",
+    "Blog/Linux/Centos7/Centos7用户管理.md",
+    "Blog/JAVA/SpringCloud/SpringBoot-Primer.md",
+    "Blog/MongoDB/MongoDB-CentOS7-安装.md",
+    "Blog/JAVA/DevTools/Maven-pom.xml.md",
+    "Blog/MySQL/MySQL-Primer.md",
+    "Blog/MySQL/mysql规范.md",
+    "Blog/JAVA/DevTools/Idea Plugins.md",
+    "Blog/Kubernetes/Kubernetes环境部署.md",
+    "Blog/Docker/DockerPrimer.md"
+  ]
+}

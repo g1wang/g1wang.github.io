@@ -4,17 +4,22 @@
 
 ### 1、卸载系统自带的MariaDB。
 
-- （1）查看有没有安装
-
-  `mariadb：rpm -qa|grep -i mariadb`
+- （1）查看有没有安装mariadb
+```
+rpm -qa|grep -i mariadb
+```
 
 - （2）卸载mariadb：
 
-  `rpm -e --nodeps mariadb-libs-5.5.60-1.el7_5.x86_64`
+```
+sudo rpm -e --nodeps mariadb-libs-5.5.60-1.el7_5.x86_64
+```
 
 - （3）删除my.conf：
 
-  `rm /etc/my.cnf`
+```
+sudo rm /etc/my.cnf
+```
 
 ### 2、卸载已安装的mysql（没安装过忽略）
 
@@ -30,21 +35,40 @@
 - （1）官网下载安装包MySQL-5.6.44-1.el7.x86_64.rpm-bundle.tar，
 
   - 下载地址为：https://dev.mysql.com/downloads/mysql
-  - cd /usr/local/src wget https://cdn.mysql.com/archives/mysql-5.6/MySQL-5.6.51-1.el7.x86_64.rpm-bundle.tar
+```
+cd /usr/local/src 
 
-- （2）创建用户组：`groupadd mysql`
+sudo wget https://cdn.mysql.com/archives/mysql-5.6/MySQL-5.6.51-1.el7.x86_64.rpm-bundle.tar
 
-- （3）创建一个用户名为mysql的用户并加入mysql用户组：`useradd -g mysql mysql`
+```
 
-- （4）安装依赖： `yum install perl  yum -y install autoconf`
+- （2）创建用户组：
+```
+sudo groupadd mysql
+```
 
-- （5）并进入该目录解压：`tar -xvf MySQL-*-bundle.tar*`
+- （3）创建一个用户名为mysql的用户并加入mysql用户组：
+```
+sudo useradd -g mysql mysql
+```
+
+- （4）安装依赖： 
+```
+sudo yum install perl  yum -y install autoconf
+```
+
+- （5）并进入该目录解压：
+```
+sudo tar -xvf MySQL-*-bundle.tar*
+```
 
 - （6）运行命令进行安装：
 
-  ```
-  rpm -ivh MySQL-client-*.el7.x86_64.rpmrpm -ivh MySQL-devel*1.el7.x86_64.rpmrpm -ivh MySQL-server-*.el7.x86_64.rpm
-  ```
+```
+sudo rpm -ivh MySQL-client-*.el7.x86_64.rpm
+sudo rpm -ivh MySQL-devel*1.el7.x86_64.rpm
+sudo rpm -ivh MySQL-server-*.el7.x86_64.rpm
+```
 
   
 
