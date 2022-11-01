@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Blog/MySQL/MySQL-Primer.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Blog/MySQL/MySQL-Primer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Blog/MySQL/MySQL-Primer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Blog/MySQL/MySQL-Primer.md"
               }
             }
           }
@@ -138,9 +138,9 @@
   },
   "active": "67d3fb98d4d5087c",
   "lastOpenFiles": [
+    "README.md",
     "Blog/MySQL/mysql安装.md",
     "Blog/JAVA/SpringCloud/MyBatis.md",
-    "README.md",
     "Blog/Linux/Centos7/Centos7硬件安装.md",
     "Blog/MySQL/mysql规范.md",
     "Blog/Linux/Centos7/Centos7用户管理.md",
