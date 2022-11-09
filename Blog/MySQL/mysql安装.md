@@ -114,7 +114,7 @@ SET PASSWORD FOR 'username'@'host' = PASSWORD('newpassword');
   `chkconfig mysql on`
 
 ### 6 防火墙开发端口
-​	[Centos7 防火墙添加端口白名单](https://app.yinxiang.com/shard/s33/nl/9786851/4e2fb976-00d4-4195-bb00-e524439db291)
+- [Centos7 防火墙添加端口白名单](https://app.yinxiang.com/shard/s33/nl/9786851/4e2fb976-00d4-4195-bb00-e524439db291)
 
 ### 7、mysql命令及配置：
 
