@@ -5,6 +5,7 @@
 #### [Enum](./Blog/JAVA/JavaPrimer/Enum.md)
 #### [Java-Primer](./Blog/JAVA/JavaPrimer/Java-Primer.md)
 #### [Java-IO](./Blog/JAVA/JavaPrimer/Java-IO.md)
+#### [分布式的CAP](./Blog/JAVA/JavaPrimer/分布式的CAP.md)
 ### SpringBoot
 #### [RestfulAPI](./Blog/JAVA/springcloud/RestfulAPI.md)
 #### [SpringBoot-Primer](./Blog/JAVA/springcloud/SpringBoot-Primer.md)
@@ -34,9 +35,12 @@
 #### [MySQL规范](./Blog/MySQL/mysql规范.md)
 #### [MySQL-Primer](./Blog/MySQL/MySQL-Primer.md)
 ### [常用SQL](./Blog/MySQL/常用SQL.md)
+#### [MySQL主从备份](./Blog/MySQL/MySQL主从备份.md)
 
 ## MongoDB
 #### [MongoDB-Primer](./Blog/MongoDB/MongoDB-Primer.md)
+#### [MongoDB-Problems](./Blog/MongoDB/MongoDB-Problems.md)
+#### [MongoDB-CentOS7-安装](./Blog/MongoDB/MongoDB-CentOS7-安装.md)
 
 ## MQ
 #### [MQTT](./Blog/MQ/MQTT.md)
