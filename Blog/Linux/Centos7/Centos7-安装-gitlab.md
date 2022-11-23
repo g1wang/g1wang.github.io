@@ -104,22 +104,16 @@ gitlab_rails['smtp_domain'] = "qq.com"
 gitlab_rails['smtp_authentication'] = "login"
 
 gitlab_rails['smtp_enable_starttls_auto'] = true
-
 gitlab_rails['smtp_tls'] = false
 
 # 关闭普罗米修斯（非常吃内存，没有8G内存不要开）
 
 # 在vim的一般模式下输入/Prometheus配合N快速查找
-
 monitor和enable写成false
-
 prometheus['enable'] = false
-
 prometheus['monitor_kubernetes'] = false
 
-
 # 如果想修改远程仓库的显示地址，修改配置
-
 vim /opt/gitlab/embedded/service/gitlab-rails/config/gitlab.yml.example
  
 
@@ -128,24 +122,17 @@ vim /opt/gitlab/embedded/service/gitlab-rails/config/gitlab.yml.example
 给gitlab添加SSL认证
 ```
 # 修改配置文件：vim /etc/gitlab/gitlab.rb
-
 external_url 'https://10.10.10.63'    #启用https，默认是http
-
 nginx['enable'] = true
-
 nginx['redirect_http_to_https'] = true    #http重定向到https
-
 nginx['ssl_certificate'] = "/etc/gitlab/ssl/server.crt"            #ssl证书路径
-
 nginx['ssl_certificate_key'] = "/etc/gitlab/ssl/server.key"    #ssl秘钥路径
   
 
 # 生成ssl证书和私钥
 
 mkdir -p /etc/gitlab/ssl
-
 chmod -R 777 /etc/gitlab/ssl/
-
 openssl req -x509 -nodes -days 10000 -newkey rsa:2048 -keyout /etc/gitlab/ssl/server.key -out /etc/gitlab/ssl/server.crt
 
 安装要求输入国别、城市、机构、姓名等
@@ -174,27 +161,20 @@ req -x509：这指定我们要使用X.509证书签名请求（CSR）管理。“
 修改好配置文件后
 ```
 # 重建配置
-
 gitlab-ctl reconfigure
 ```
 登录gitlab
 ```
 https://ip 或者 https://域名 如果浏览器报不安全，忽略，继续进入。
-
 案例：我搭建成功的网址 https://www.8zi.site
 ```
 给gitlab添加SSH key
 ```
 # 在某个开发人员的机器上：
-
 ssh-keygen -t rsa
-
 cat ~/.ssh/id_rsa.pub
-
 # 将id_rsa.pub文件内容全部复制
-
 # 浏览器登录gitlab，进入gitlab
-
 # Profile Settings-->SSH Keys--->Add SSH Key
 
 #粘贴你复制的公钥，点击add按钮。
@@ -202,21 +182,13 @@ cat ~/.ssh/id_rsa.pub
 Gitlab常用命令
 ```
 gitlab-ctl start         # 启动所有 gitlab 组件
-
 gitlab-ctl stop          # 停止所有 gitlab 组件
-
 gitlab-ctl restart       # 重启所有 gitlab 组件
-
 gitlab-ctl status        # 查看服务状态
-
 gitlab-ctl reconfigure   # 启动服务
-
 gitlab-ctl show-config   # 验证配置文件
-
 gitlab-ctl tail          # 查看日志 
-
 gitlab-rake gitlab:check SANITIZE=true --trace    # 检查gitlab
-
 vim /etc/gitlab/gitlab.rb # 修改默认的配置文件
 ```
 

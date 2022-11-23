@@ -4,83 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "382fb2fa63593649",
+        "id": "08ec1b94d0b87f5b",
         "type": "tabs",
         "children": [
           {
-            "id": "ed45cbcc0f98c14a",
+            "id": "3025f0f5d2a3fb13",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Blog/MySQL/mysql安装.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c38bbfa1c4f43a37",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Blog/MongoDB/MongoDB-Primer.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7a4e78567539b22c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "readme.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ea4749f5793329c6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Blog/Algorithm/Readme.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "343607d67033198e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Blog/JAVA/JavaPrimer/分布式的CAP.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "980ec03183e8ff32",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Blog/JAVA/SpringCloud/SpringCloud Alibaba.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -146,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blog/JAVA/SpringCloud/SpringCloud Alibaba.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blog/JAVA/SpringCloud/SpringCloud Alibaba.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -185,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Blog/JAVA/SpringCloud/SpringCloud Alibaba.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -197,17 +128,17 @@
     "direction": "horizontal",
     "width": 302.5
   },
-  "active": "980ec03183e8ff32",
+  "active": "3025f0f5d2a3fb13",
   "lastOpenFiles": [
+    "Blog/JAVA/SpringCloud/SpringCloud Alibaba.md",
+    "Blog/Linux/Centos7/Centos7-安装-gitlab.md",
+    "Blog/Algorithm/C6 Floyd算法.md",
     "Blog/JAVA/JavaPrimer/分布式的CAP.md",
     "readme.md",
     "Blog/Algorithm/Readme.md",
     "Blog/JAVA/SpringCloud/SpringPrimer.md",
     "Blog/Untitled.md",
     "Blog/MongoDB/MongoDB-Problems.md",
-    "Blog/MongoDB/MongoDB-CentOS7-安装.md",
-    "Blog/MongoDB/MongoDB-Primer.md",
-    "Blog/MySQL/mysql安装.md",
-    "Blog/MySQL/常用SQL.md"
+    "Blog/MongoDB/MongoDB-CentOS7-安装.md"
   ]
 }
