@@ -11,11 +11,28 @@
             "id": "3025f0f5d2a3fb13",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Blog/Algorithm/Algorithm.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3c91c6095c0b6d94",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Blog/Algorithm/LeetCode.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Blog/Algorithm/LeetCode.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Blog/Algorithm/LeetCode.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +137,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Blog/Algorithm/LeetCode.md"
+              }
             }
           }
         ],
@@ -128,14 +149,14 @@
     "direction": "horizontal",
     "width": 302.5
   },
-  "active": "3025f0f5d2a3fb13",
+  "active": "3c91c6095c0b6d94",
   "lastOpenFiles": [
+    "Blog/Algorithm/Algorithm.md",
+    "Blog/Algorithm/Readme.md",
     "Blog/JAVA/SpringCloud/SpringCloud Alibaba.md",
     "Blog/Linux/Centos7/Centos7-安装-gitlab.md",
-    "Blog/Algorithm/C6 Floyd算法.md",
     "Blog/JAVA/JavaPrimer/分布式的CAP.md",
     "readme.md",
-    "Blog/Algorithm/Readme.md",
     "Blog/JAVA/SpringCloud/SpringPrimer.md",
     "Blog/Untitled.md",
     "Blog/MongoDB/MongoDB-Problems.md",
