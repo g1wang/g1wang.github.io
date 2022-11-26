@@ -30,9 +30,17 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "1a2920e6f29f0a27",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +106,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blog/Algorithm/LeetCode.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +122,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blog/Algorithm/LeetCode.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,9 +143,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Blog/Algorithm/LeetCode.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -149,8 +153,9 @@
     "direction": "horizontal",
     "width": 302.5
   },
-  "active": "3c91c6095c0b6d94",
+  "active": "f200c374d0808dc6",
   "lastOpenFiles": [
+    "Blog/Algorithm/LeetCode.md",
     "Blog/Algorithm/Algorithm.md",
     "Blog/Algorithm/Readme.md",
     "Blog/JAVA/SpringCloud/SpringCloud Alibaba.md",
@@ -159,7 +164,6 @@
     "readme.md",
     "Blog/JAVA/SpringCloud/SpringPrimer.md",
     "Blog/Untitled.md",
-    "Blog/MongoDB/MongoDB-Problems.md",
-    "Blog/MongoDB/MongoDB-CentOS7-安装.md"
+    "Blog/MongoDB/MongoDB-Problems.md"
   ]
 }
