@@ -52,6 +52,14 @@ output: count; // count 就是结果
 ```
 
 ## TOP-K问题几种解法
+相关题目 ：
+https://leetcode.com/problems/top-k-frequent-elements/solution/
+
+-   快排 O(nlog(n))
+-   局部排序-k冒泡 O(nk)
+-   K堆排序 O(nlog(k))
+-   随机数快排
+-   BFPRT（中位数的中位数）
 
 
 ## Boyer-Moore Voting Algorithm
