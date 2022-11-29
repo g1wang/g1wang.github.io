@@ -17,3 +17,14 @@ db.createUser( { user:"rootadmin", pwd:"123456", roles:[{role:"root",db:"admin"}
 ```
 db.currentOp(true);
 ```
+
+
+## MongoDB springboot连接集群超时
+
+错误信息
+Client view of cluster state is {type=REPLICA_SET, servers=[{address=127.0.0.1
+
+解决
+config = rs.conf()
+config.members[0].host = "172.16.236.207:27017";
+rs.reconfig(config,{force:true});

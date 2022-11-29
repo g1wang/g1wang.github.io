@@ -40,12 +40,12 @@ sudo ln -f /home/wanggl/anaconda3/bin/python3.7 /usr/bin/python
 
 ### 安装torchvision & cuda9.0的版本
 
-#创建环境
+- 创建环境
 conda create --name ptcv
 
-#linux
+- linux
 source activate ptcv
-#windows
+- windows
 conda activate ptcv
 
 #### GPU
@@ -78,7 +78,7 @@ python -m pip install tensorflow
 ### cython c 扩展 python
 
 conda install cython
-conda install cffi   #cffi是连接Python与c的桥梁
+conda install cffi   # cffi是连接Python与c的桥梁
 
 - msgpack
 

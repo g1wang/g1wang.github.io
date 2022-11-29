@@ -4,6 +4,7 @@
 ### JAVA Primer
 #### [Enum](./Blog/JAVA/JavaPrimer/Enum.md)
 #### [Java-Primer](./Blog/JAVA/JavaPrimer/Java-Primer.md)
+#### [Concurrent](./Blog/JAVA/JavaPrimer/Concurrent.md)
 #### [Java-IO](./Blog/JAVA/JavaPrimer/Java-IO.md)
 #### [分布式的CAP](./Blog/JAVA/JavaPrimer/分布式的CAP.md)
 ### SpringBoot
@@ -34,7 +35,7 @@
 #### [MySQL安装](./Blog/MySQL/mysql安装.md)
 #### [MySQL规范](./Blog/MySQL/mysql规范.md)
 #### [MySQL-Primer](./Blog/MySQL/MySQL-Primer.md)
-### [常用SQL](./Blog/MySQL/常用SQL.md)
+### [SQL学习](SQL学习.md)
 #### [MySQL主从备份](./Blog/MySQL/MySQL主从备份.md)
 
 ## MongoDB
@@ -69,3 +70,10 @@
 ## Kubernetes
 #### [Kubernetes-Primer](./Blog/Kubernetes/Kubernetes-Primer.md)
 #### [Kubernetes环境部署](./Blog/Kubernetes/Kubernetes环境部署.md)
+
+## Algorithm
+#### [Algorithm](./Blog/Algorithm/Algorithm.md)
+#### [LeetCode](./Blog/Algorithm/LeetCode.md)
+
+## DeepLearning
+#### [Pytorch环境搭建](./Blog/DeepLearning/Pytorch环境搭建.md)
