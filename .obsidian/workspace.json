@@ -25,14 +25,34 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/JAVA/JavaPrimer/Concurrent.md",
+                "file": "Blog/JAVA/DevOps/jenkins  安装.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "91005b9377f67da9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Blog/JAVA/DevOps/Jenkins.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5c15e0bbba43d1f6",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blog/JAVA/JavaPrimer/Concurrent.md",
+                "file": "Blog/JAVA/DevOps/Jenkins.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blog/JAVA/JavaPrimer/Concurrent.md",
+                "file": "Blog/JAVA/DevOps/Jenkins.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blog/JAVA/JavaPrimer/Concurrent.md"
+                "file": "Blog/JAVA/DevOps/Jenkins.md"
               }
             }
           }
@@ -149,9 +169,10 @@
     "direction": "horizontal",
     "width": 302.5
   },
-  "active": "07af77c798072141",
+  "active": "91005b9377f67da9",
   "lastOpenFiles": [
-    "inbox/jenkins.md",
+    "Blog/JAVA/DevOps/jenkins  安装.md",
+    "Blog/JAVA/DevOps/Jenkins.md",
     "Blog/JAVA/JavaPrimer/Concurrent.md",
     "Blog/JAVA/JavaPrimer/Java-Primer.md",
     "Blog/JAVA/JavaPrimer/Java-IO.md",
@@ -159,7 +180,6 @@
     "Blog/JAVA/JavaPrimer/Enum.md",
     "Blog/Docker/DockerPrimer.md",
     "Blog/Docker/Docker-WordPress.md",
-    "Blog/Docker/Docker-Redis.md",
-    "Readme.md"
+    "Blog/Docker/Docker-Redis.md"
   ]
 }
