@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/JAVA/DevOps/jenkins  安装.md",
+                "file": "Blog/Linux/Centos7/Centos7-安装-gitlab.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blog/JAVA/DevOps/jenkins  安装.md",
+                "file": "Blog/Linux/Centos7/Centos7-安装-gitlab.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blog/JAVA/DevOps/jenkins  安装.md",
+                "file": "Blog/Linux/Centos7/Centos7-安装-gitlab.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blog/JAVA/DevOps/jenkins  安装.md"
+                "file": "Blog/Linux/Centos7/Centos7-安装-gitlab.md"
               }
             }
           }
@@ -163,10 +163,10 @@
   },
   "active": "07af77c798072141",
   "lastOpenFiles": [
+    "Blog/JAVA/DevOps/jenkins  安装.md",
     "Blog/Linux/Centos7/Centos7-防火墙添加端口白名单.md",
     "Blog/Linux/Centos7/Centos7用户管理.md",
     "Blog/JAVA/DevOps/Jenkins.md",
-    "Blog/JAVA/DevOps/jenkins  安装.md",
     "Blog/JAVA/JavaPrimer/Concurrent.md",
     "Readme.md",
     "Blog/JAVA/JavaPrimer/Java-Primer.md",
