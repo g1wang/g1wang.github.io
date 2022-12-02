@@ -24,11 +24,11 @@ sudo firewall-cmd --permanent --zone=public --add-port=8484/tcp
 
 命令含义
 
---zone #作用域
+--zone # 作用域
 
---add-port=8484/tcp #添加端口，格式为：端口/通讯协议
+--add-port=8484/tcp # 添加端口，格式为：端口/通讯协议
 
---permanent #永久生效，没有此参数重启后失效
+--permanent # 永久生效，没有此参数重启后失效
 
   
 

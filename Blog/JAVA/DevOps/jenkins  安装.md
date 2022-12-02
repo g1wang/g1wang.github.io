@@ -6,14 +6,19 @@ sudo mkdir backup
 sudo mv C* backup
  
 2. 下载阿里云的yum源到了/etc/yum.repos.d中，所以不需要切换到/etc/yum.repos.d目录下
-CentOS 5
-wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-5.repo
-CentOS 6
-wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo
 CentOS 7
 sudo wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 
 二 安装 jenkins 
+
+// 如果未安装java还需安装java
+sudo yum install java-11-openjdk* -y
+java -version
+// 需要切换使用jdk11
+sudo alternatives --config java
+// 选择jdk11
+
+
 sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenkins.repo --no-check-certificate
 sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
 
@@ -21,8 +26,7 @@ sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
 sudo yum -y install epel-release
 sudo yum -y install daemonize
 sudo yum install jenkins
-//如果未安装java还需安装java
-sudo yum install java
+
 
 三 相关命令
 // 启动和停止
