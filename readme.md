@@ -21,8 +21,8 @@
 #### [JVM_02_GC](./Blog/JAVA/JVM/JVM_02_GC.md)
 #### [JVM_03_ClassLoader](./Blog/JAVA/JVM/JVM_03_ClassLoader.md)
 
-### WEB
-#### [nginx跨域处理](./Blog/JAVA/WEB/nginx跨域处理.md)
+### Server
+#### [nginx](nginx.md)
 
 ### DevTools
 #### [IDEA快捷键](./Blog/JAVA/DevTools/IDEA快捷键.md)
