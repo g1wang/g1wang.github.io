@@ -37,14 +37,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/Linux/Centos7/Linux查看日志.md",
+                "file": "Blog/MySQL/mysql安装.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "45b9afe8be258a9e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Blog/MySQL/MySQL-常用SQL.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -110,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blog/Linux/Centos7/Linux查看日志.md",
+                "file": "Blog/MySQL/MySQL-常用SQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blog/Linux/Centos7/Linux查看日志.md",
+                "file": "Blog/MySQL/MySQL-常用SQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blog/Linux/Centos7/Linux查看日志.md"
+                "file": "Blog/MySQL/MySQL-常用SQL.md"
               }
             }
           }
@@ -161,17 +173,17 @@
     "direction": "horizontal",
     "width": 302.5
   },
-  "active": "657ef51ef29908fb",
+  "active": "45b9afe8be258a9e",
   "lastOpenFiles": [
+    "Readme.md",
+    "Blog/MySQL/MySQL-常用SQL.md",
+    "Blog/MySQL/mysql安装.md",
+    "Blog/MySQL/MySQL-Primer.md",
+    "Blog/Linux/Centos7/Linux查看日志.md",
     "Blog/JAVA/JavaPrimer/Java-Primer.md",
     "Blog/JAVA/Server/Kafka.md",
     "Blog/Linux/Centos7/Centos7命令.md",
     "Blog/Linux/Centos7/Centos7-yum源.md",
-    "Blog/JAVA/DevOps/jenkins  安装.md",
-    "Blog/Linux/Centos7/Linux查看日志.md",
-    "Blog/JAVA/Server/Zookeeper.md",
-    "Blog/JAVA/Server/nginx.md",
-    "Readme.md",
-    "inbox/ClickHouse.md"
+    "Blog/JAVA/DevOps/jenkins  安装.md"
   ]
 }

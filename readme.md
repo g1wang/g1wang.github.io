@@ -41,6 +41,7 @@
 #### [MySQL-Primer](./Blog/MySQL/MySQL-Primer.md)
 ### [SQL学习](SQL学习.md)
 #### [MySQL主从备份](./Blog/MySQL/MySQL主从备份.md)
+#### [MySQL-常用SQL](./Blog/MySQL/MySQL-常用SQL.md)
 
 ## MongoDB
 #### [MongoDB-Primer](./Blog/MongoDB/MongoDB-Primer.md)
