@@ -33,12 +33,18 @@ sudo ln -s /usr/local/xx ss
 
 ```
 tar  -zcvf  文件名.tar.gz 输入被压缩的文件名，可以多个
+
+# tar.xz
+tar  -Jcvf
 ```
 
 ### zip
 ```
 yum install -y unzip zip
 ```
+
+
+
 
 
 ## scp

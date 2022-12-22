@@ -52,6 +52,10 @@
 #### [MQTT](./Blog/MQ/MQTT.md)
 #### [emqx安装](./Blog/MQ/emqx安装.md)
 
+## Redis
+#### [Redis-install](./Blog/Redis/Redis-install.md)
+
+
 ## Linux
 ### Centos7
 #### [Centos7-yum源](./Blog/Linux/Centos7/Centos7-yum源.md)
@@ -84,3 +88,6 @@
 
 ## DeepLearning
 #### [Pytorch环境搭建](./Blog/DeepLearning/Pytorch环境搭建.md)
+
+## Python
+#### [Python安装](./Blog/## Python/Python安装.md)

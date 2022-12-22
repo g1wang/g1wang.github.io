@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Blog/redis/Redis-install.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Blog/redis/Redis-install.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Blog/redis/Redis-install.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Blog/redis/Redis-install.md"
               }
             }
           }
@@ -161,17 +161,17 @@
     "direction": "horizontal",
     "width": 302.5
   },
-  "active": "f200c374d0808dc6",
+  "active": "657ef51ef29908fb",
   "lastOpenFiles": [
-    "Blog/Docker/DockerPrimer.md",
-    "Blog/redis/redis-install.md",
+    "README.md",
+    "Blog/redis/Redis-install.md",
+    "Blog/Python/Python安装.md",
     "Blog/Linux/Centos7/Centos7命令.md",
+    "Blog/Docker/DockerPrimer.md",
     "Blog/Untitled.md",
     "Readme.md",
     "Blog/MySQL/mysql安装.md",
     "Blog/MongoDB/MongoDB-Primer.md",
-    "Blog/Linux/Centos7/Linux查看日志.md",
-    "Blog/MySQL/MySQL-常用SQL.md",
-    "Blog/MySQL/MySQL-Primer.md"
+    "Blog/Linux/Centos7/Linux查看日志.md"
   ]
 }
