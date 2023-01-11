@@ -232,3 +232,11 @@ java -jar xx.jar --spring.profiles.active=prod
   
 17、默认参数（通过 `SpringApplication.setDefaultProperties` 指定）；
 ```
+
+### spring-boot 事务异常： because it is a JDK dynamic proxy that implement 
+
+```
+因为加了 @Transaction 的类会自动开启动态代理，
+java的代理机制主要有 JDK动态代理 和 CGLIB ，报上面的错误是因为使用了JDK动态代理机制
+开启@Transaction设置的@EnableTransactionManagement(proxyTargetClass = true)
+```

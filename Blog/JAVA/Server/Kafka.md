@@ -29,8 +29,6 @@ $ bin/kafka-server-start.sh config/server.properties
 # create topic
 $ bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092
 
-# create 
-$ bin/kafka-topics.sh --describe --topic quickstart-events --bootstrap-server localhost:9092
 # details such as the partition count of the new topic
 $ bin/kafka-topics.sh --describe --topic quickstart-events --bootstrap-server localhost:9092
 
@@ -62,3 +60,30 @@ https://github.com/yahoo/CMAK
 ```
 unzip cmak-3.0.0.6.zip
 ```
+
+- 启动
+```
+# 修改配置文件 conf/application.conf
+# 单个zk
+cmak.zkhosts="my.zookeeper.host.com:2181"
+# zk集群
+cmak.zkhosts="my.zookeeper.host.com:2181,other.zookeeper.host.com:2181"
+
+# 默认端口9000，-Dhttp.port 指定端口
+$ bin/cmak -Dconfig.file=/path/to/application.conf -Dhttp.port=8080
+```
+- 登录管理后台
+	- Add Cluster
+
+## kafka 原理
+
+### Kafka架构
+
+- 话题（Topic）：是特定类型的消息流。消息是字节的有效负载（Payload），话题是消息的分类名或种子（Feed）名
+- 生产者（Producer）：是能够发布消息到话题的任何对象
+- 服务代理（Broker）：已发布的消息保存在一组服务器中，它们被称为代理（Broker）或Kafka集群
+- 消费者（Consumer）：可以订阅一个或多个话题，并从Broker拉数据，从而消费这些已发布的消息
+
+### Kafka存储策略
+
+- 1）kafka以topic来进行消息管理，每个topic包含多个partition，每个partition对应一个逻辑log，有多个segment组成
