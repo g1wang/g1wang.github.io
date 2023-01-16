@@ -90,4 +90,4 @@
 #### [Pytorch环境搭建](./Blog/DeepLearning/Pytorch环境搭建.md)
 
 ## Python
-#### [Python安装](./Blog/## Python/Python安装.md)
+#### [Python安装](./Blog/Python/Python安装.md)
