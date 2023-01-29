@@ -54,6 +54,7 @@
 
 ## Redis
 #### [Redis-install](./Blog/Redis/Redis-install.md)
+#### [Redis](./Blog/Redis/Redis.md)
 
 
 ## Linux

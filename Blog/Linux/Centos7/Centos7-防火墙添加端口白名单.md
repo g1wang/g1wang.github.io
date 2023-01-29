@@ -8,7 +8,7 @@ systemctl status firewalld
 
 需要开启防火墙
 
- systemctl start firewalld.service  
+systemctl start firewalld.service  
 
 firewall-cmd --zone=public --list-ports       ##查看已开放的端口
 
