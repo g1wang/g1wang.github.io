@@ -1,6 +1,7 @@
 # nginx
 
 ## nginx跨域处理
+
 ```
     #api
 
