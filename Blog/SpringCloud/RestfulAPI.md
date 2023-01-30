@@ -6,7 +6,7 @@
 
 #### **RestfulAPI 导图**
 
-![](.\image\SpringBoot-RestfulAPI-1.png)
+![](SpringBoot-RestfulAPI-1.png)
 
 #### **理解RESTful**
 
@@ -27,7 +27,7 @@ URI 表示资源，资源一般对应服务器端领域模型中的实体类
 
 标准HTTP方法包含：GET、POST、PUT、DELETE、Patch，他们的使用功能如下列表所示
 
-![](.\image\SpringBoot-RestfulAPI-2.png)
+![](SpringBoot-RestfulAPI-2.png)
 
 ##### 资源的表述
 

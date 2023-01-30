@@ -1,29 +1,14 @@
 # g1wang's Blog
 
 ## JAVA
-### JAVA Primer
-#### [Enum](./Blog/JAVA/JavaPrimer/Enum.md)
 #### [Java-Primer](./Blog/JAVA/JavaPrimer/Java-Primer.md)
 #### [Concurrent](./Blog/JAVA/JavaPrimer/Concurrent.md)
 #### [Java-IO](./Blog/JAVA/JavaPrimer/Java-IO.md)
 #### [分布式的CAP](./Blog/JAVA/JavaPrimer/分布式的CAP.md)
-### SpringBoot
-#### [RestfulAPI](./Blog/JAVA/springcloud/RestfulAPI.md)
-#### [SpringBoot-Primer](./Blog/JAVA/springcloud/SpringBoot-Primer.md)
-#### [SpringBoot热部署](./Blog/JAVA/springcloud/SpringBoot热部署.md)
-#### [MyBatis](./Blog/JAVA/springcloud/MyBatis.md)
-#### [SpringBoot-samples](SpringBoot-samples.md)
-#### [SpringPrimer](SpringPrimer.md)
-
-
 ### JVM
 #### [JVM_01_Runtime_Data_Area](./Blog/JAVA/JVM/JVM_01_Runtime_Data_Area.md)
 #### [JVM_02_GC](./Blog/JAVA/JVM/JVM_02_GC.md)
 #### [JVM_03_ClassLoader](./Blog/JAVA/JVM/JVM_03_ClassLoader.md)
-
-### Server
-#### [nginx](./Blog/JAVA/Server/nginx.md)
-#### [Tengine安装](./Blog/JAVA/Server/Tengine安装.md)
 ### DevTools
 #### [IDEA快捷键](./Blog/JAVA/DevTools/IDEA快捷键.md)
 #### [IDEA类和方法注释模板设置](./Blog/JAVA/DevTools/IDEA类和方法注释模板设置.md)
@@ -31,7 +16,20 @@
 #### [SVN-Migrate-To-Git](./Blog/JAVA/DevTools/SVN-Migrate-To-Git.md)
 #### [Yapi部署并迁移文档](./Blog/JAVA/DevTools/Yapi部署并迁移文档.md)
 
-### DevOps
+## SpringCloud
+#### [RestfulAPI](./Blog/SpringCloud/RestfulAPI.md)
+#### [SpringBoot-Primer](./Blog/SpringCloud/SpringBoot-Primer.md)
+#### [SpringBoot热部署](./Blog/SpringCloud/SpringBoot热部署.md)
+#### [MyBatis](./Blog/SpringCloud/MyBatis.md)
+#### [SpringBoot-samples](./Blog/SpringCloud/SpringBoot-samples.md)
+#### [SpringPrimer](./Blog/SpringCloud/SpringPrimer.md)
+
+## Server
+#### [nginx](nginx.md)
+#### [Tengine安装](Tengine安装.md)
+
+
+## DevOps
 #### [jenkins](./Blog/JAVA/DevOps/jenkins.md)
 #### [jenkins安装](./Blog/JAVA/DevOps/jenkins安装.md)
 
