@@ -57,8 +57,18 @@ Symbolic Links：跟hard link不同，这个是建立一个独立的文件，而
 
 看样子，似乎 hard link 比较安全，因为即使某一个 inode 被杀掉了，只要有任何一个 inode 存在，那么该文件就不会不见！不过，不幸的是，由于 Hard Link 的限制太多了，包括无法做目录的 link ，所以在用途上面是比较受限的！反而是 Symbolic Link 的使用方向较广！那么如何建立软连接和硬连接呢？这就用到了ln 命令。
 
-ln 语法： ln [-s] [来源文件] [目的文件]
-ln 常用的选项就一个-s ，如果不加就是建立硬连接，加上就建立软连接
+#### 软链接
+- 更新软链接
+`ln -snf  src target`
+
+- 添加软链接
+`ln -s src target`
+
+- 添加到系统链接
+```
+cd /usr/bin
+sudo ln -s /usr/local/xx ss
+```
 
 ## Linux磁盘管理
 
@@ -68,7 +78,7 @@ ln 常用的选项就一个-s ，如果不加就是建立硬连接，加上就
 -h 使用合适的单位显示，例如G，-k -m 分别为使用K，M为单位显示
 #### du 
 用来查看某个目录所占空间大小，语法：du [-abckmsh]  [文件或者目录名]
-- 查看当前目录各文件占用 sudo du -sh *
+- 查看当前目录各文件占用  `sudo du -sh *`
 
 ### 磁盘分区、格式化、挂载
 
@@ -191,3 +201,126 @@ df -h
 ?word
 想光标之前寻找一个字符串名为word的字符串，当找到第一个word后，按”n”继续搜前一个
 ```
+
+## 文档的压缩与打包
+.gz gzip 压缩工具压缩的文件
+.bz2 bzip2 压缩工具压缩的文件
+.tar tar 打包程序打包的文件(tar并没有压缩功能，只是把一个目录合并成一个文件)
+.tar.gz 可以理解为先用tar打包，然后再gzip压缩
+.tar.bz2 同上，先用tar打包，然后再bzip2压缩
+
+### gzip
+文件压缩后，源文件不存在，慎用。gzip不可以压缩目录
+语法：gzip [-d#] filename 其中#为1-9的数字
+-d ：解压缩时使用
+-# ：压缩等级，1压缩最差，9压缩最好，6为默认
+示例：
+```
+压缩
+gzip text1.txt
+解压
+gzip -d text1.txt.gz
+```
+
+### bzip2
+语法：bzip2 [-dz] filename
+-d ：解压缩
+-z ：压缩
+```
+压缩
+bzip2 -z text1.txt
+解压
+bzip2 -d text1.txt.bz2
+```
+
+### tar
+语法：tar [-zjxcvfpP] filename
+-z ：是否同时用gzip压缩
+-j ：是否同时用bzip2压缩
+-x ：解包或者解压缩
+-t ：查看tar包里面的文件
+-c ：建立一个tar包或者压缩文件包
+-v ：可视化
+-f ：后面跟文件名，压缩时跟-f文件名，意思是压缩后的文件名为filename，解压时跟-f文件名，意思是解压filename。请注意，如果是多个参数组合的情况下带有-f，请把f写到最后面。
+
+示例1: .tar
+```
+压缩
+tar -cvf text.tar text1.txt
+解压
+tar -xvf text.tar
+```
+
+示例2: .tar.gz
+```
+压缩
+tar -zcvf text1.tar.gz text1.txt
+解压
+tar -zxvf text1.tar.gz text1.txt
+```
+
+示例3 tar.bz2
+```
+压缩
+tar -jcvf
+解压
+tar -jxvf
+```
+
+### zip
+```
+yum install -y unzip zip
+```
+
+## 用户管理
+### 添加用户
+```
+useradd devops
+#设置密码
+passwd devops
+```
+
+### 授权
+```
+#添加 sudoers 文件可写权限
+chmod -v u+w /etc/sudoers
+#修改 sudoers 文件
+vi /etc/sudoers
+#添加授权
+#[用户名]    ALL=(ALL)    ALL 
+devops    ALL=(ALL)       ALL
+#收回 sudoers 文件可写权限
+chmod -v u-w /etc/sudoers
+```
+
+## 软件安装
+
+### yum
+1. 将旧的yum源移到其他位置，只使用阿里云的yum源安装软件
+cd /etc/yum.repos.d
+mkdir backup
+mv C* backup
+
+2. 下载阿里云的yum源到了/etc/yum.repos.d中，所以不需要切换到/etc/yum.repos.d目录下
+CentOS 7
+```
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+```
+
+## 网络
+### scp
+- scp 目录
+- scp 文件
+`scp root@192.168.70.133:/opt/nexusbak.tar.gz /opt/nexus.tar.gz`
+
+### 查看端口占用
+`netstat -ano|grep 6379`
+
+## 其他
+### command not found
+
+```
+echo 'export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin' >> /etc/profile
+source /etc/profile
+```
+

@@ -22,8 +22,8 @@
 #### [JVM_03_ClassLoader](./Blog/JAVA/JVM/JVM_03_ClassLoader.md)
 
 ### Server
-#### [nginx](nginx.md)
-
+#### [nginx](./Blog/JAVA/Server/nginx.md)
+#### [Tengine安装](./Blog/JAVA/Server/Tengine安装.md)
 ### DevTools
 #### [IDEA快捷键](./Blog/JAVA/DevTools/IDEA快捷键.md)
 #### [IDEA类和方法注释模板设置](./Blog/JAVA/DevTools/IDEA类和方法注释模板设置.md)
@@ -58,13 +58,8 @@
 
 
 ## Linux
-### Centos7
-#### [Centos7-yum源](./Blog/Linux/Centos7/Centos7-yum源.md)
-#### [Centos7命令](./Blog/Linux/Centos7/Centos7命令.md)
-#### [Centos7用户管理](./Blog/Linux/Centos7/Centos7用户管理.md)
 #### [Centos7正式环境安装](./Blog/Linux/Centos7/Centos7正式环境安装.md)
 #### [Centos7-防火墙添加端口白名单](./Blog/Linux/Centos7/Centos7-防火墙添加端口白名单.md)
-#### [Centos7_Tengine安装](./Blog/Linux/Centos7/Centos7_Tengine安装.md)
 #### [Centos7-安装-gitlab](./Blog/Linux/Centos7/Centos7-安装-gitlab.md)
 #### [Linux查看日志](./Blog/Linux/Centos7/Linux查看日志.md)
 #### [Linux_SSH限制IP登录](./Blog/Linux/Centos7/Linux_SSH限制IP登录.md)
