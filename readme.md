@@ -30,7 +30,7 @@
 
 
 ## DevOps
-#### [jenkins](./Blog/JAVA/DevOps/jenkins.md)
+#### [Jenkins](Jenkins.md)
 #### [jenkins安装](./Blog/JAVA/DevOps/jenkins安装.md)
 
 ## MySQL
