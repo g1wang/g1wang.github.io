@@ -5,6 +5,7 @@
 #### [Concurrent](./Blog/JAVA/JavaPrimer/Concurrent.md)
 #### [Java-IO](./Blog/JAVA/JavaPrimer/Java-IO.md)
 #### [分布式的CAP](./Blog/JAVA/JavaPrimer/分布式的CAP.md)
+
 ### JVM
 #### [JVM_01_Runtime_Data_Area](./Blog/JAVA/JVM/JVM_01_Runtime_Data_Area.md)
 #### [JVM_02_GC](./Blog/JAVA/JVM/JVM_02_GC.md)
@@ -27,7 +28,6 @@
 ## Server
 #### [nginx](nginx.md)
 #### [Tengine安装](Tengine安装.md)
-
 
 ## DevOps
 #### [Jenkins](Jenkins.md)
@@ -54,10 +54,8 @@
 #### [Redis-install](./Blog/Redis/Redis-install.md)
 #### [Redis](./Blog/Redis/Redis.md)
 
-
 ## Linux
 #### [Centos7正式环境安装](./Blog/Linux/Centos7/Centos7正式环境安装.md)
-#### [Centos7-防火墙添加端口白名单](./Blog/Linux/Centos7/Centos7-防火墙添加端口白名单.md)
 #### [Centos7-安装-gitlab](./Blog/Linux/Centos7/Centos7-安装-gitlab.md)
 #### [Linux查看日志](./Blog/Linux/Centos7/Linux查看日志.md)
 #### [Linux_SSH限制IP登录](./Blog/Linux/Centos7/Linux_SSH限制IP登录.md)
@@ -73,8 +71,6 @@
 ## Kubernetes
 #### [Kubernetes-Primer](./Blog/Kubernetes/Kubernetes-Primer.md)
 #### [Kubernetes环境部署](./Blog/Kubernetes/Kubernetes环境部署.md)
-
-
 
 ## Algorithm
 #### [Algorithm](./Blog/Algorithm/Algorithm.md)
