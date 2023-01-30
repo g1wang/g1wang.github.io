@@ -64,12 +64,12 @@
 #### [Centos7用户管理](./Blog/Linux/Centos7/Centos7用户管理.md)
 #### [Centos7正式环境安装](./Blog/Linux/Centos7/Centos7正式环境安装.md)
 #### [Centos7-防火墙添加端口白名单](./Blog/Linux/Centos7/Centos7-防火墙添加端口白名单.md)
-#### [Centos7硬件安装](./Blog/Linux/Centos7/Centos7硬件安装.md)
 #### [Centos7_Tengine安装](./Blog/Linux/Centos7/Centos7_Tengine安装.md)
 #### [Centos7-安装-gitlab](./Blog/Linux/Centos7/Centos7-安装-gitlab.md)
 #### [Linux查看日志](./Blog/Linux/Centos7/Linux查看日志.md)
 #### [Linux_SSH限制IP登录](./Blog/Linux/Centos7/Linux_SSH限制IP登录.md)
 #### [Linux查找命令](./Blog/Linux/Centos7/Linux查找命令.md)
+#### [Linux-Primer](./Blog/Linux/Linux-Primer.md)
 
 ## Docker
 #### [DockerPrimer](./Blog/Docker/DockerPrimer.md)
