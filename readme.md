@@ -1,21 +1,21 @@
 # g1wang's Blog
 
-## JAVA
-#### [Java-Primer](./JAVA/JavaPrimer/Java-Primer.md)
-#### [Concurrent](./JAVA/JavaPrimer/Concurrent.md)
-#### [Java-IO](./JAVA/JavaPrimer/Java-IO.md)
-#### [分布式的CAP](./JAVA/JavaPrimer/分布式的CAP.md)
+### JAVA
+[Java-Primer](./JAVA/JavaPrimer/Java-Primer.md)
+[Concurrent](./JAVA/JavaPrimer/Concurrent.md)
+[Java-IO](./JAVA/JavaPrimer/Java-IO.md)
+[分布式的CAP](./JAVA/JavaPrimer/分布式的CAP.md)
 
-### JVM
-#### [JVM_01_Runtime_Data_Area](./JAVA/JVM/JVM_01_Runtime_Data_Area.md)
-#### [JVM_02_GC](./JAVA/JVM/JVM_02_GC.md)
-#### [JVM_03_ClassLoader](./JAVA/JVM/JVM_03_ClassLoader.md)
-### DevTools
-#### [IDEA快捷键](./JAVA/DevTools/IDEA快捷键.md)
-#### [IDEA类和方法注释模板设置](./JAVA/DevTools/IDEA类和方法注释模板设置.md)
-#### [Maven-pom.xml](./JAVA/DevTools/Maven-pom.xml.md)
-#### [SVN-Migrate-To-Git](./JAVA/DevTools/SVN-Migrate-To-Git.md)
-#### [Yapi部署并迁移文档](./JAVA/DevTools/Yapi部署并迁移文档.md)
+#### JVM
+[JVM_01_Runtime_Data_Area](./JAVA/JVM/JVM_01_Runtime_Data_Area.md)
+[JVM_02_GC](./JAVA/JVM/JVM_02_GC.md)
+[JVM_03_ClassLoader](./JAVA/JVM/JVM_03_ClassLoader.md)
+#### DevTools
+[IDEA快捷键](./JAVA/DevTools/IDEA快捷键.md)
+[IDEA类和方法注释模板设置](./JAVA/DevTools/IDEA类和方法注释模板设置.md)
+[Maven-pom.xml](./JAVA/DevTools/Maven-pom.xml.md)
+[SVN-Migrate-To-Git](./JAVA/DevTools/SVN-Migrate-To-Git.md)
+[Yapi部署并迁移文档](./JAVA/DevTools/Yapi部署并迁移文档.md)
 
 ## SpringCloud
 #### [RestfulAPI](./SpringCloud/RestfulAPI.md)
