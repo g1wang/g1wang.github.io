@@ -1,4 +1,4 @@
-# mysql 工具
+# MySQL工具
 
 ## mysql运维工具 percona-toolkit
 下载地址： https://www.percona.com/downloads/percona-toolkit/LATEST/

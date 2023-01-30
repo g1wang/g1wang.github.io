@@ -21,7 +21,7 @@
 #### [RestfulAPI](./SpringCloud/RestfulAPI.md)
 #### [SpringBoot-Primer](./SpringCloud/SpringBoot-Primer.md)
 #### [SpringBoot热部署](./SpringCloud/SpringBoot热部署.md)
-#### [MyBatis](./SpringCloud/MyBatis.md)
+#### [SpringBoot-MyBatis](SpringBoot-MyBatis.md)
 #### [SpringBoot-samples](./SpringCloud/SpringBoot-samples.md)
 #### [SpringPrimer](./SpringCloud/SpringPrimer.md)
 
@@ -34,8 +34,8 @@
 #### [jenkins安装](./JAVA/DevOps/jenkins安装.md)
 
 ## MySQL
-#### [MySQL安装](./MySQL/mysql安装.md)
-#### [MySQL规范](./MySQL/mysql规范.md)
+#### [MySQL安装](MySQL安装.md)
+#### [MySQL规范](MySQL规范.md)
 #### [MySQL-Primer](./MySQL/MySQL-Primer.md)
 ### [SQL学习](SQL学习.md)
 #### [MySQL主从备份](./MySQL/MySQL主从备份.md)
